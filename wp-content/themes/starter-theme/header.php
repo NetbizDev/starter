@@ -8,7 +8,7 @@
 
 		<title><?php wp_title(); ?></title>
 		<meta property="og:title" content="<?php wp_title(); ?>" />
-		<meta property="og:site_name" content="Amberjack"/>
+		<meta property="og:site_name" content="Starter"/>
 		<meta property="og:url" content="<?php echo home_url(); ?>" />
 		<meta property="og:description" content="" />
 		<meta property="fb:app_id" content="" />
