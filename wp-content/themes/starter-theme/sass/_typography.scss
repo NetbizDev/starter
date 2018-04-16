@@ -1,0 +1,30 @@
+/*
+*   Product title
+\*============================*/
+.product-title {
+  padding-bottom: 0.5em;
+  font-size: 14px;
+
+  &.two-lines {
+    font-family: $pauza-fot-bold;
+
+    .title-hebrew,
+    .title-english {
+      display: block;
+    }
+
+    .title-hebrew {
+      padding-bottom: 0.3em;
+    }
+  }
+
+  .title-hebrew {
+    font-size: 1em;
+  }
+
+  .title-english {
+    font-size: 0.73em;
+    font-family: $pauza-fot-bold;
+    text-transform: uppercase;
+  }
+}

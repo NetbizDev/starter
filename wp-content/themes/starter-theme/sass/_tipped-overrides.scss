@@ -1,0 +1,102 @@
+/* x-x-large */
+.tpd-size-x-large {
+  .tpd-content,
+  .tpd-size-x-large .tpd-title {
+    padding: 20px;
+    font-size: 16px;
+    line-height: 20px;
+  }
+
+  .tpd-background { border-radius: 8px; }
+
+  .tpd-stem {
+    width: 18px;
+    height: 9px;
+    margin-left: 7px;
+    margin-top: 2px; /* space between target and stem */
+  }
+
+  &.tpd-no-radius .tpd-stem { margin-left: 10px; }
+
+  .tpd-close { margin: 5px 2px 5px 2px; }
+
+  .tpd-spinner {
+    width: 54px;
+    height: 38px;
+  }
+
+  .tpd-spinner-spin { margin: 9px 0 0 17px; }
+
+  .tpd-spinner-spin,
+  .tpd-size-x-large .tpd-spinner-spin:after {
+    width: 20px;
+    height: 20px;
+  }
+}
+
+
+/* light - override the dark theme since skins are pro version only */
+.tpd-skin-dark {
+
+  .tpd-content,
+  .tpd-title,
+  .tpd-close { color: #000; }
+  .tpd-background-content,
+  .tpd-background-title {
+    background-color: #fff;
+  }
+
+  .tpd-background {
+    border-width: 1px;
+    border-color: #fff;
+    border-color: rgba(0, 0, 0, .1);
+  }
+
+  /* line below the title */
+  .tpd-title-wrapper { border-bottom: 1px solid #404040; }
+
+  /* shadow */
+  .tpd-background-shadow { box-shadow: 0 0 8px rgba(0,0,0,.15); }
+
+  /* spinner */
+  .tpd-spinner-spin {
+    border-color: rgba(255,255,255,.2);
+    border-left-color: #fff;
+  }
+
+  /* links */
+  a {
+    color: $popup-link-color;
+    text-decoration: none;
+    font-size: 14px;
+    display: block;
+
+    &:after {
+      width: 7px;
+      height: 12px;
+      display: inline-block;
+      background: url("../images/green-arrow.png") 0 center no-repeat;
+      vertical-align: middle;
+      line-height: 16px;
+      background-size: contain;
+      transform: translateX(-40%);
+      transition: transform 0.1s ease;
+      content: '';
+    }
+    
+    &:hover {
+      color: $popup-link-color;
+      text-decoration: none;
+      &:after {
+        transform: translateX(-80%);
+      }
+    }
+  }
+
+
+  h2, h3, h4, h5, h6 {
+    font-size: 22px;
+    @include pauza-fot-bold;
+    margin-bottom: 10px;
+  }
+}

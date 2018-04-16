@@ -1,0 +1,99 @@
+.top-menu-container {
+	display: none;
+}
+
+.top-menu-free-shipping {
+	display: block;
+	position: absolute;
+	top: 0;
+	right: 0;
+	width: 100%;
+	padding: 0 13px;
+	text-align: center;
+	line-height: 14px;
+	font-size: 10px;
+	pointer-events: none;
+}
+
+@media (min-width: 992px) {
+	.top-menu-free-shipping {
+		right: 21px;
+		height: auto;
+		width: auto;
+		padding: 0;
+		background: none;
+		color: rgb(42, 210, 25);
+		line-height: 29px;
+		font-size: 15px;
+		// animation-duration: 2s;
+		// animation-name: blink;
+		// animation-iteration-count: infinite;
+		// animation-direction: alternate;
+	}
+	
+	@keyframes blink {
+		from { opacity: 1; }
+		to { opacity: 0; }
+	}
+
+	.top-menu-container {
+		display: block;
+		height: $top-menu-container-height;
+		font-size: 0;
+		text-align: left;
+		background: $site__header-top;
+
+		.menu-item {
+			display: inline-block;
+			vertical-align: top;
+			border-left: 1px solid #000;
+			border-right: 1px solid #333;
+			font-size: 15px;
+			text-align: center;
+
+			&:first-child { border-right: none; }
+			&:last-child { border-left: none; }
+
+			&:hover,
+			&.current-menu-item {
+				a {
+					color: $secondary-color;
+				}
+			}
+
+			&.menu-item-columbia {
+				position: relative;
+				font-size: 12px;
+				background: url("../img/columbia.png") 17px 7px no-repeat;
+				background-size: 15px 14px;
+
+				a {
+					padding: 10px 13px 7px 34px;
+				}
+
+				&:before {
+					opacity: 0;
+					position: absolute;
+					top: 7px;
+					left: 17px;
+					width: 15px;
+					height: 15px;
+					background: url("../img/columbia_hover.png") no-repeat;
+					background-size: contain;
+					transition: opacity 0.3s ease;
+					content: '';
+				}
+
+				&:hover:before { opacity: 1; }
+			}
+		}
+
+		a {
+			display: block;
+			height: 100%;
+			padding: 8px 21px 6px;
+			color: #fff;
+			transition: color 0.3s ease;
+		}
+	}
+}

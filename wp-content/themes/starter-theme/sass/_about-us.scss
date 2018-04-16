@@ -1,0 +1,55 @@
+/* about-us */
+
+/* ------------ about-us ------------ */
+.about-us {
+  padding: 0;
+
+  &__column { margin-bottom: 20px; }
+
+  p {
+    margin-bottom: 21px;
+    color: $about-us-text-color;
+    font-size: 16px;
+    line-height: 1.34;
+
+    &:last-child { margin-bottom: 0; }
+
+    span { display: block; }
+
+    strong {
+      color: $about-us-strong-text-color;
+      font-size: 18px;
+      line-height: 19px;
+      @include pauza-fot-bold();
+    }
+  }
+
+}
+/* ------------ /about-us ------------ */
+
+@media (min-width: 992px) {
+
+  /* ------------ about-us ------------ */
+  .about-us {
+
+    @include justify(justify);
+
+    &__column {
+      display: inline-block;
+      vertical-align: top;
+      width: 46%;
+      text-align: right;
+      margin-bottom: 0;
+    }
+
+  }
+  /* ------------ /about-us ------------ */
+
+}
+@media (min-width: 1200px) {
+
+  /* ------------ about-us ------------ */
+  .about-us { padding: 60px 164px 50px 202px; }
+  /* ------------ /about-us ------------ */
+
+}

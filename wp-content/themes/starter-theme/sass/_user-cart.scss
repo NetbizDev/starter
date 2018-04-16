@@ -1,0 +1,112 @@
+/* user-cart */
+// TODO: refactor
+.woocommerce-cart {
+	background-color: $light-gray;
+
+	.secure-pay-btn {
+		width: 100%;
+		margin: 0 0 20px;
+	}
+
+	.site__header .site__header-cart {
+		display: none;
+	}
+
+	.site__content {
+		background-color: #fff;
+	}
+
+	.cart-wrapper {
+		padding: 40px 0;
+	}
+
+	.page-title {
+		font-size: 21px;
+		color: $secondary-color;
+	}
+
+	.products-list-wrapper {
+		padding-top: 20px;
+	}
+}
+
+/* ------------ user-cart ------------ */
+.user-cart {
+	position: relative;
+	color: #262626;
+}
+
+/* ------------ /user-cart ------------ */
+
+/* ------------ vip-club ------------ */
+.vip-club {
+	display: flex;
+	align-items: center;
+	padding: 12px 11px 5px 5px;
+	font-size: 15px;
+	line-height: 20px;
+	@include pauza-fot-book();
+	background: #f6f8fd;
+	border: 1px solid #f0f0f0;
+
+	.vip-club__checkbox {
+		padding-left: 8px;
+
+		label {
+			display: block;
+			padding-right: 29px;
+
+			&:after {
+				top: 50%;
+				margin-top: -10px;
+			}
+		}
+	}
+
+	.vip-club__title {
+		font-size: 16px
+	}
+
+	b {
+		font-weight: 400;
+		@include pauza-fot-bold();
+	}
+
+	a,
+	a:visited {
+		color: #2ad219;
+		text-decoration: underline;
+
+		&:hover {
+			text-decoration: none;
+		}
+	}
+}
+
+/* ------------ /vip-club ------------ */
+
+@media (min-width: 992px) {
+	.woocommerce-cart {
+		.cart-wrapper {
+			max-width: 980px;
+			padding-left: 10px;
+			padding-right: 10px;
+			margin: 0 auto;
+		}
+
+		.page-title {
+			padding-bottom: 25px;
+		}
+
+		.products-list-wrapper {
+			float: right;
+			width: 52%;
+			padding-top: 0;
+		}
+
+		.processing__aside {
+			float: left;
+			width: 35%;
+		}
+	}
+}

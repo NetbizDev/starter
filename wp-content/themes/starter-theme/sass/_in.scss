@@ -1,0 +1,38 @@
+.in {
+  display: block;
+  overflow: hidden;
+  padding-bottom: 20px;
+  text-align: center;
+
+  > span {
+    position: relative;
+    display: inline-block;
+    vertical-align: top;
+    color: #000;
+    font-size: 16px;
+
+    &:before {
+      position: absolute;
+      top: 50%;
+      right: 100%;
+      width: 2000px;
+      height: 1px;
+      margin: -1px 7px 0 0;
+      background: #e7e7e7;
+      content: '';
+    }
+
+    &:after {
+      position: absolute;
+      top: 50%;
+      left: 100%;
+      margin: -1px 0 0 7px;
+      width: 2000px;
+      height: 1px;
+      background: #e7e7e7;
+      content: '';
+    }
+
+  }
+
+}

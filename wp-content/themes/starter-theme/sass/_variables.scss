@@ -1,0 +1,87 @@
+// Site
+$site-content-small-side-margin: 10px;
+$site-content-medium-side-margin: 20px;
+$site-content-large-side-margin: 56px;
+
+// Header
+$site-header-z-index: 3;
+$site-header-mobile-height: 44px;
+$site-header-main-height: 58px;
+
+// Top Menu
+$top-menu-container-height: 29px;
+
+// Main Menu
+$main-menu-mobile-width: 290px;
+$main-menu-mobile-bg-color: #f6f6f6;
+$main-menu-mobile-link-vert-padding: 20px;
+$main-menu-mobile-item-border: 1px solid #e3e3e3;
+$main-menu-item-border: 1px solid #f2f2f2;
+$main-menu-item-transition: 0.2s ease-in-out;
+$main-menu-font-size: 17px;
+
+// Main Menu => Sub Menu
+$sub-menus-container-horz-padding: 30px;
+$sub-menus-container-vert-padding: 25px;
+$sub-menu-border: 1px solid #e5e5e5;
+
+// Mobile Index Menu
+$mobile-index-menu-item-height: 45px;
+$mobile-index-menu-item-vert-padding: 20px;
+
+// Footer Menus
+$footer-menus-font-size: 14px;
+
+// Footer
+$site-footer-mobile-row-padding: 15px;
+$site-footer-desktop-row-padding: 30px;
+
+// Hamburger
+$hamburger-size: 34px;
+$hamburger-top-offset: 5px;
+$hamburger-left-offset: 4px;
+$hamburger-z-index: 4;
+
+// Icons
+$activity-running:  26;
+$activity-ski:      27;
+$activity-cycling:  28;
+$activity-camping:  40;
+$activity-army:     41;
+$activity-daily:    42;
+$activity-travel:   43;
+$activity-yoga:     44;
+
+$tech-heat:    295;
+$tech-water:   296;
+$tech-cold:    297;
+$tech-protect: 298;
+
+$free-ship: 'free-shipping';
+
+$activities-icons-map: (
+	$activity-running: "\e909",
+	$activity-ski:     "\e90a",
+	$activity-cycling: "\e905",
+	$activity-camping: "\e908",
+	$activity-army:    "\e904",
+	$activity-daily:   "\e906",
+	$activity-travel:  "\e907",
+	$activity-yoga:    "\e90b"
+);
+
+$tech-icons-map: (
+	$tech-heat:    "\e901",
+	$tech-water:   "\e903",
+	$tech-cold:    "\e900",
+	$tech-protect: "\e902"
+);
+
+$general-icons-map: (
+	$free-ship:    "\e90c",
+	
+);
+
+// Pseudo Contents
+$content-arrow-left: '←';
+$content-check-mark: '✔';

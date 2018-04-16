@@ -1,0 +1,184 @@
+/* products-gallery */
+
+/* ------------ products-gallery ------------ */
+.products-gallery {
+	background: $products-gallery-back;
+	position: relative;
+	padding: 0 20px 16px;
+
+	&__wrapper {
+		position: relative;
+		max-width: 1060px;
+		margin: 0 auto;
+	}
+
+	&__head {
+		max-width: 1075px;
+		margin: 0 auto;
+		padding: 20px;
+		border-bottom: 1px solid $products-gallery-title-border;
+		@include pauza-fot-bold();
+	}
+
+	&__title {
+		display: inline;
+		font-size: 30px;
+		color: $products-gallery-title-color;
+		font-weight: 400;
+		margin-left: 5px;
+	}
+
+	&__name {
+		color: $products-gallery-name-color;
+	}
+
+	&__description {
+		display: none;
+		max-width: 189px;
+		margin: 0 auto;
+		font-size: 13px;
+		color: $products-gallery-description-color;
+		@include pauza-fot-book();
+
+		span {
+			display: inline;
+			border-bottom: 1px solid transparent;
+			transition: border-bottom 0.3s ease;
+			line-height: 1.25;
+		}
+	}
+
+	.swiper-container {
+		max-width: 960px;
+		margin: 0 auto;
+		padding: 13px 0 10px;
+
+		.swiper-slide {
+			text-align: center;
+
+			img {
+				display: block;
+				margin: 0 auto 15px;
+				height: 100%;
+				width: auto;
+			}
+
+			&:hover .products-gallery__description span {
+				border-bottom: 1px solid $products-gallery-slide-border;
+			}
+		}
+
+	}
+
+	.swiper-button-next,
+	.swiper-button-prev {
+		left: 0;
+		margin-top: -11px;
+		background-image: $products-gallery-arrow-back;
+		background-repeat: no-repeat;
+		background-position: 0 0;
+	}
+
+	.swiper-button-next {
+		background-position: -16px 0;
+		left: auto;
+		right: 0;
+	}
+
+	&__pic {
+		display: table;
+		width: 90%;
+		margin: 0 auto 11px;
+		border-bottom: 1px solid $products-gallery-pic-border;
+
+		> div {
+			display: table-cell;
+			vertical-align: middle;
+			text-align: center;
+			height: 120px;
+		}
+	}
+
+}
+
+.with-side-title {
+	.products-gallery__description {
+		display: block;
+	}
+
+	.product-price {
+		display: none;
+	}
+}
+
+.site_blue-bg .products-gallery__head {
+	padding: 20px;
+}
+
+.site_blue-bg .swiper-container {
+	padding-bottom: 113px;
+}
+
+@media (min-width: 992px) {
+
+	.products-gallery {
+
+		&__head {
+			padding: 28px 55px 18px;
+		}
+
+		&__title {
+			margin-left: 10px;
+			font-size: 38px;
+		}
+
+		.swiper-container {
+			padding: 19px 0 85px;
+		}
+
+		&__pic {
+			width: auto;
+			border-bottom: none;
+			margin-bottom: 10px;
+
+			> div {
+				height: 194px;
+			}
+		}
+
+		.product-price {
+			font-size: 14px;
+		}
+
+	}
+
+	.with-side-title {
+
+		.products-gallery__wrapper {
+			padding: 0 245px 0 20px;
+		}
+
+		.products-gallery__head {
+			position: absolute;
+			top: 50%;
+			right: 0;
+			width: 245px;
+			margin: 0;
+			padding: 0 49px 0 0;
+			border-bottom: none;
+			transform: translate(0, -50%);
+		}
+
+		.swiper-container {
+			padding: 65px 0;
+		}
+
+		.products-gallery__title {
+			margin: 0 0 15px 0;
+			display: block;
+		}
+	}
+
+}
+
+/* ------------ /products-gallery ------------ */

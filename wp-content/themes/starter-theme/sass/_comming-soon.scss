@@ -1,0 +1,146 @@
+
+/*
+    faq styles
+    version: 14.11.2015
+
+    comming-soon
+
+*/
+
+/* ------------ site ------------ */
+.site_comming-soon {
+	display: -ms-flexbox;
+	display: -webkit-flex;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	background: url("../img/bg_comming-soon.jpg") no-repeat top center;
+	background-size: cover;
+	align-items: stretch;
+	border: 0 solid #fff;
+}
+.site_comming-soon:after {
+	display: none;
+}
+.site_comming-soon .logo {
+	top: 20px;
+	left: 20px;
+	right: auto;
+}
+.site_comming-soon .site__footer {
+	left: 0;
+	right: 0;
+	position: relative;
+}
+/* ------------ /site ------------ */
+
+/* ------------ comming-soon ------------ */
+.comming-soon {
+	text-align: center;
+	margin: auto;
+  	//@include pauza-fot-light();
+	color: #fff;
+	font-size: 20px;
+}
+.comming-soon h1 {
+  	@include lobster();
+	font-size: 30px;
+	color: #fff;
+	font-weight: 400;
+}
+.comming-soon__wrap {
+	position: relative;
+	padding: 20px 15px;
+}
+.comming-soon fieldset {
+	border-bottom: 1px solid #8492af;
+	display: inline-block;
+	padding-bottom: 2px;
+}
+.comming-soon input {
+	background: none;
+	font-size: 20px;
+	//@include pauza-fot-light();
+	color: #fff;
+	padding-left: 20px;
+}
+.comming-soon ::-webkit-input-placeholder {
+	color: #9da2b2;
+}
+.comming-soon :-moz-placeholder {
+	color: #9da2b2;
+}
+.comming-soon .placeholder {
+	color: #9da2b2;
+}
+.comming-soon__submit {
+	color: #2dd31d;
+	font-size: 20px;
+	background: none;
+	border: none;
+	position: relative;
+	padding-left: 15px;
+	//@include pauza-fot-light();
+}
+.comming-soon__submit:before {
+	content: '';
+	position: absolute;
+	border: none;
+	left: 0;
+	bottom: -1px;
+	width: 20px;
+	height: 30px;
+	background: transparent url(../img/green-arrow.png) 0 center no-repeat;
+	background-size: 7px 8px;
+	transition: transform .2s ease-in-out;
+}
+.comming-soon__submit:hover:before {
+	transform: translateX(-3px);
+}
+.comming-soon__ready {
+	border-bottom: 1px solid #8492af;
+	display: inline-block;
+	padding-bottom: 2px;
+	opacity: 0;
+	transition: opacity .3s ease-in-out;
+}
+/* ------------ /comming-soon ------------ */
+
+@media (min-width: 992px) {
+
+	/* ------------ site ------------ */
+	.site_comming-soon .logo {
+		top: 68px;
+		left: 63px;
+	}
+	.site_comming-soon .logo img {
+		width: 189px;
+	}
+	.site_comming-soon {
+		border-width: 57px 57px 0 57px;
+	}
+	/* ------------ /site ------------ */
+
+	/* ------------ comming-soon ------------ */
+	.comming-soon {
+		font-size: 42px;
+	}
+	.comming-soon h1 {
+		font-size: 72px;
+		margin-bottom: 36px;
+	}
+	.comming-soon input {
+		font-size: 42px;
+		width: 540px;
+	}
+	.comming-soon__submit {
+		font-size: 42px;
+		padding-left: 26px;
+	}
+	.comming-soon__submit:before {
+		bottom: 12px;
+		background-size: 10px 13px;
+	}
+	/* ------------ /comming-soon ------------ */
+
+}

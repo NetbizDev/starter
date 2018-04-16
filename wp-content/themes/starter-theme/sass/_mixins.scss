@@ -1,0 +1,70 @@
+@mixin justify($text-align) {
+  text-align: $text-align;
+
+  @if $text-align == "justify" {
+    &:after {
+      display: inline-block;
+    }
+  } @else {
+    &:after {
+      display: none;
+    }
+  }
+  &:after {
+    width: 100%;
+    content: '';
+  }
+}
+
+@mixin clearfix() {
+  &:before,
+  &:after {
+    content: "";
+    height: 0;
+    display: block;
+    clear: both;
+  }
+}
+
+@mixin center-vertical() {
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+@mixin un-center-vertical() {
+  position: static;
+  transform: none;
+}
+
+/// Remove the unit from a number
+/// @param {Number} $number - Number to remove unit from
+/// @return {Number} - Unitless number
+@function strip-units( $number ) {
+  @if type_of($number) == 'number' and not unitless($number) {
+    @return $number / ($number * 0 + 1);
+  }
+
+  @return $number;
+}
+
+//transform
+@mixin rotateY( $deg ) {
+  transform: rotateY( $deg + deg );
+}
+
+@mixin rotateX( $deg ) {
+  transform: rotateX($deg + deg);
+}
+//transition
+@mixin transition( $property, $duration, $function ) {
+  -webkit-transition: $property $duration+s $function;
+  transition: $property $duration+s $function;
+}
+
+//transform
+@mixin transform-rotate( $deg ) {
+  -webkit-transform: rotate($deg+deg);
+  -ms-transform: rotate($deg+deg);
+  transform: rotate($deg+deg);
+}

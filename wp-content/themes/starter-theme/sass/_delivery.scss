@@ -1,0 +1,362 @@
+.woocommerce-checkout {
+	.site {
+		background-color: #f6f8fd;
+	}
+
+	.site__header .site__header-cart {
+		display: none;
+	}
+}
+
+.delivery__post-column {
+	margin-bottom: -16px;
+	@include justify(justify);
+
+	.text-field:nth-child(1) {
+		width: 32.23140495%;
+	}
+
+	.text-field:nth-child(2) {
+		width: 63.63636364%;
+	}
+}
+
+.delivery__post-type {
+	margin-bottom: 26px;
+}
+
+.delivery__shop-map {
+	height: 130px;
+	background: url("../img/delivery__shop.png") no-repeat center;
+	margin-bottom: 8px;
+	position: relative;
+
+	> div {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		opacity: 0;
+	}
+
+	&.active > div {
+		opacity: 1;
+	}
+}
+
+.delivery__shop-select {
+	border-bottom: 1px solid #e9e9e9;
+	padding-bottom: 14px;
+	margin-bottom: 23px;
+}
+
+.delivery__dropdown-btn {
+	margin: 21px 0 29px;
+}
+
+.order-review-form {
+	.form-title {
+		padding-bottom: 0.5em;
+		font-size: 20px;
+	}
+
+	.payment {
+		padding: 20px 0;
+	}
+
+	.btns {
+		min-width: 240px;
+		padding: 0 1em;
+	}
+}
+
+.pelecard-iframe-container {
+	iframe {
+		width: 100%;
+		height: 500px;
+	}
+}
+
+.delivery__shop-select .ares-select ul li {
+  height: auto;
+  padding: 9px 10px;
+  line-height: 19px;
+  white-space: normal;
+}
+/*
+*   Order summary
+\*============================*/
+.order-summary-wrapper,
+.order_details {
+	padding: 20px 0;
+}
+
+.order-summary,
+.order_details {
+	// Variables
+	$order-summary-font-size: 16px;
+	$order-summary-dark-bg: #262626;
+	$order-summary-dark-gray-bg: #dfe0e4;
+	$order-summary-light-gray-bg: #f7f8fd;
+	$order-summary-td-padding: 0.7em 1em;
+
+	font-size: $order-summary-font-size;
+
+	li,
+	.summary-item {
+		padding: $order-summary-td-padding;
+		border-bottom: 1px solid $order-summary-dark-gray-bg;
+		background-color: $order-summary-light-gray-bg;
+
+		&:last-child {
+			border: none;
+			color: #fff;
+			background-color: $order-summary-dark-bg;
+		}
+	}
+
+	li:not(.summery-item) {
+		strong {
+			float: left;
+		}
+	}
+
+	.item-content {
+		display: inline-block;
+		vertical-align: middle;
+	}
+
+	.item-label {
+		width: 50%;
+	}
+
+	.item-value {
+		width: 48%;
+	}
+}
+
+.checkout__form {
+
+	.information {
+		font-size: 15px;
+		color: #444343;
+		line-height: 18px;
+		margin-bottom: 20px;
+
+		span {
+			display: block;
+		}
+	}
+
+	.form-row {
+		width: 100%;
+		margin-left: 2%;
+		margin-bottom: 10px;
+
+		&.form-row-narrow {
+			width: 100%;
+		}
+		&.place-order {
+			margin-top: 16px;
+		}
+		&.full-width {
+			width: 100%;
+		}
+
+		&.notes {
+			.input-text {
+				display: block;
+				padding: 10px 16px;
+				font-size: 16px;
+				width: 100%;
+				height: 80px;
+			}
+		}
+
+	}
+
+	.input-text {
+		width: 100%;
+		padding: 0 14px;
+		height: 40px;
+		font-size: 16px;
+	}
+
+	.clear {
+		clear: both;
+		width: 100%;
+		content: "";
+	}
+}
+
+.billing__form {
+
+	.nice-radio > label {
+		position: relative;
+	}
+
+	.billing-fields-wrapper {
+		display: none;
+
+		&.active {
+			display: block;
+		}
+	}
+
+	.title {
+		border-top: 1px solid #e9e9e9;
+		padding-top: 22px;
+		margin-bottom: 12px;
+
+		&.address-title {
+			margin-top: 11px;
+		}
+	}
+}
+
+.delivery__form {
+
+	.shipping__methods {
+		padding-bottom: 35px;
+		color: #262626;
+		font-size: 18px;
+
+		.nice-radio {
+			display: inline-block;
+			margin-left: 20px;
+		}
+	}
+}
+
+.delivery__login {
+
+	border-bottom: 1px solid #e9e9e9;
+	font-size: 18px;
+	color: #262626;
+	padding-bottom: 18px;
+	@include pauza-fot-bold();
+
+	a {
+		@include pauza-fot-book();
+		text-decoration: underline;
+		color: #262626;
+	}
+
+	a:hover {
+		text-decoration: none;
+	}
+
+}
+
+.wc_payment_methods {
+	.wc_payment_method {
+		margin-bottom: 15px;
+	}
+}
+
+.checkout {
+
+	.cta {
+		margin-top: 10px;
+		width: 234px;
+	}
+
+	.payment {
+		padding-bottom: 25px;
+
+		.title {
+			padding-bottom: 20px;
+		}
+	}
+}
+
+@media (min-width: 768px) {
+	.delivery__shop-select .ares-select {
+		/*width: 242px;*/
+		width: 484px;
+	}
+
+	.order-review-form {
+		.shop_table {
+			margin-top: 0;
+		}
+
+		.form-title {
+			font-size: 25px;
+		}
+	}
+
+	.order-summary {
+		max-width: 50%;
+	}
+
+	.woocommerce-checkout {
+
+		.information {
+			margin-bottom: 31px;
+		}
+
+		.form-row {
+			float: right;
+			width: 47.98%;
+
+			&.form-row-narrow {
+				width: 23%;
+			}
+		}
+
+		.form-row.place-order {
+			width: auto;
+			float: none;
+		}
+
+		.form-row.notes {
+			clear: both;
+			float: none;
+			width: 98%;
+
+			.input-text {
+				display: block;
+				padding: 10px 16px;
+				font-size: 16px;
+				width: 100%;
+				height: 80px;
+			}
+		}
+	}
+
+	.order_details {
+		float: left;
+		width: 40%;
+		padding: 0;
+	}
+
+	.pelecard-iframe-container {
+		float: right;
+		width: 50%;
+	}
+}
+
+@media (min-width: 992px) {
+	.order-review-form {
+		.shop_table {
+			float: right;
+			width: 55%;
+		}
+
+		.order-summary-wrapper {
+			float: left;
+			width: 35%;
+			padding: 0;
+
+			.order-summary {
+				max-width: none;
+			}
+
+			.form-title {
+				display: none;
+			}
+		}
+	}
+}

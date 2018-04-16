@@ -1,0 +1,11 @@
+.clearfix:before,
+.clearfix:after {
+	content: "";
+	height: 0;
+	display: block;
+	clear: both;
+}
+
+.clear {
+	clear: both;
+}

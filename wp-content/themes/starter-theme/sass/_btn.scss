@@ -1,0 +1,265 @@
+/* btn */
+
+/* ------------ btn ------------ */
+.add-to-cart-btn {
+  position: relative;
+  overflow: hidden;
+
+  &:before {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+    background: $btn-back-hover;
+    opacity: 0;
+    transition: opacity .3s ease;
+    content: '';
+  }
+
+  &:after {
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 12px;
+    height: 12px;
+    margin: -6px 0 0 -6px;
+    border: 3px dotted #fff;
+    border-radius: 50%;
+    box-sizing: border-box;
+    opacity: 0;
+    transition: all .3s ease;
+    content: '';
+    animation: load-btn 2s linear infinite;
+  }
+
+  &.loaded {
+    &:before,
+    &:after {
+      opacity: 1;
+      cursor: default;
+    }
+  }
+}
+
+button.btn {
+  padding: 0 5px;
+}
+.btn {
+  display: block;
+  position: relative;
+  width: 218px;
+  height: 38px;
+  margin: 0 auto;
+  padding: 9px 5px;
+  border: none;
+  border-radius: 20px;
+  color: $btn-color;
+  background: $btn-back;
+  text-align: center;
+  transition: background .3s ease;
+  font-size: 20px;
+  @include pauza-fot-book();
+
+  &:hover { background: $btn-back-hover; }
+
+  &.btn_green {
+
+    &:hover { background: $btn-green-back-hover; }
+
+  }
+
+  &.btn_triangle {
+    display: inline-block;
+    position: relative;
+    height: auto;
+    width: auto;
+    padding: 0;
+    color: $btn-triangle-color;
+    background: none;
+    font-size: 17px;
+    text-transform: uppercase;
+    line-height: 1;
+
+    &:before {
+      position: absolute;
+      top: 50%;
+      left: -13px;
+      width: 8px;
+      height: 9px;
+      margin-top: -5px;
+      background: $btn-triangle-arrow 0 center no-repeat;
+      background-size: contain;
+      transition: transform .2s ease;
+      content: '';
+    }
+
+    &:hover:before { transform: translateX(-3px); }
+  }
+
+  &.btn_green-transp {
+    border: 1px solid $btn-transp-border;
+    border-radius: 20px;
+    font-size: 15px;
+    color: $btn-transp-color;
+    background: $btn-transp-back;
+    transition: border-color .3s ease, background .3s ease, color .3s ease;
+    height: 31px;
+
+    &:hover{
+      border: 1px solid $btn-transp-border-hover;
+      color: $btn-transp-color-hover;
+      background: $btn-transp-back;
+    }
+  }
+
+  &.btn_share {
+    width: 82px;
+    padding: 0;
+    border: 1px solid transparent;
+    border-radius: 10px;
+    background: $btn-share-back;
+    text-align: center;
+    display: inline-block;
+    position: relative;
+    padding-right: 15px;
+    color: $btn-share-color;
+    font-size: 11px;
+    transition: background .3s ease, color .3s ease;
+
+    &:before,
+    &:after {
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 11px;
+      height: 11px;
+      background: $btn-share-icon-back no-repeat;
+      background-size: contain;
+      transition: transform .3s ease;
+      content:'';
+    }
+
+    &:before {
+      opacity: 0;
+      z-index: 2;
+      background: $btn-share-icon-back-hover no-repeat;
+    }
+
+    &:hover:after { transform: scale(1.2); }
+
+  }
+
+}
+
+.loader-button {
+
+  &:before {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+    background: $btn-back-hover;
+    opacity: 0;
+    transition: opacity .3s ease;
+    content: '';
+  }
+
+  &:after {
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 12px;
+    height: 12px;
+    margin: -6px 0 0 -6px;
+    border: 3px dotted #fff;
+    border-radius: 50%;
+    box-sizing: border-box;
+    opacity: 0;
+    transition: all .3s ease;
+    content: '';
+    animation: load-btn 2s linear infinite;
+  }
+
+  &.loaded {
+    &:before,
+    &:after {
+      opacity: 1;
+      cursor: default;
+    }
+  }
+}
+
+.btn-facebook {
+  // Variables
+  $btn-fb-height: 2em !default;
+  $btn-fb-side-padding: 1em !default;
+  $btn-fb-icon-width: 0.66em !default;
+  $btn-fb-separator-offset-right: ($btn-fb-side-padding * 2) + $btn-fb-icon-width !default;
+
+  display: inline-block;
+  position: relative;
+  height: $btn-fb-height;
+  padding-right: $btn-fb-separator-offset-right + $btn-fb-side-padding;
+  padding-left: 1.5em;
+  border-radius: 1.33em;
+  line-height: strip-units($btn-fb-height);
+  font-size: 15px;
+  color: #fff;
+  background: $btn-blue-back;
+  transition: background 0.3s ease;
+
+  &:before,
+  &:after {
+    @include center-vertical;
+    position: absolute;
+    height: 1em;
+    content: '';
+  }
+
+  &:after {
+    right: $btn-fb-side-padding;
+    width: $btn-fb-icon-width;
+    background: url(../img/facebook-icon.png) no-repeat center center;
+    background-size: contain;
+  }
+
+  &:before {
+    right: $btn-fb-separator-offset-right;
+    width: 1px;
+    background: #5872a7;
+  }
+
+  &:hover { background: $btn-blue-back-hover; }
+
+  &.expanded {
+    width: 100%;
+    padding: 0;
+    text-align: center;
+  }
+}
+/* ------------ /btn ------------ */
+
+@-webkit-keyframes load-btn {
+  from {
+    -webkit-transform: rotate( 0deg );
+  }
+  to {
+    -webkit-transform: rotate( 360deg );
+  }
+}
+@keyframes load-btn {
+  from {
+    transform: rotate( 0deg );
+  }
+  to {
+    transform: rotate( 360deg );
+  }
+}

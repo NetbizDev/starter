@@ -1,0 +1,158 @@
+.total-box {
+	background: #f6f8fd;
+	border: 1px solid #f0f0f0;
+	@include pauza-fot-book();
+	font-size: 16px;
+	padding-top: 25px;
+	margin-bottom: 27px;
+}
+
+.coupon-fields {
+	height: 40px;
+	font-size: 16px;
+
+	> * {
+		height: 100%;
+	}
+
+	.input-text {
+		display: inline-block;
+		float: right;
+		width: 75%;
+		margin-bottom: 9px;
+		padding: 0 12px;
+		border: 1px solid #dbdbdb;
+		border-left: none;
+		font-size: 1em;
+		font-family: $pauza-fot-book;
+		background-color: transparent;
+
+		&:focus {
+			border-color: $secondary-color;
+		}
+	}
+
+	.coupon-submit {
+		float: left;
+		width: 25%;
+		border-radius: 0;
+		font-size: 1em;
+	}
+}
+
+.total__article {
+	display: block;
+	position: relative;
+	width: 100%;
+	height: 40px;
+	padding: 12px 12px 10px;
+	margin-bottom: 19px;
+	border: 1px solid #e2e4e9;
+	color: #262626;
+
+	input[type=text] {
+		display: block;
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		padding: 0 12px 0 30px;
+		border: none;
+		background: none;
+		color: #575757;
+		@include pauza-fot-book();
+		font-size: 16px;
+	}
+
+	&:after {
+		position: absolute;
+		top: 50%;
+		left: 10px;
+		width: 9px;
+		height: 7px;
+		background: transparent url(../img/check-icon.png) no-repeat;
+		background-size: contain;
+		transform: translate(-50%, 0);
+		content: '';
+	}
+}
+
+.total__info {
+	color: #1e1e1e;
+	padding: 0 35px;
+
+	dl {
+		border-top: 1px solid #ebedf2;
+		padding: 9px 5px;
+		display: table;
+		width: 100%;
+
+		&:first-child {
+			border-top: none;
+		}
+	}
+
+	dt {
+		display: table-cell;
+	}
+
+	dd {
+		display: table-cell;
+		text-align: left;
+	}
+}
+
+.total__footer {
+	padding: 25px 40px 31px;
+	background: #262626;
+
+	.total__sum {
+		background: none;
+		padding: 0;
+		margin-bottom: 9px;
+	}
+
+	.btn {
+		width: 100%;
+		font-size: 18px;
+	}
+}
+
+.total__sum {
+	display: table;
+	width: 100%;
+	padding: 25px 40px 17px;
+	background: #262626;
+	color: #fff;
+
+	dt {
+		display: table-cell;
+		vertical-align: bottom;
+		padding-bottom: 11px;
+	}
+
+	dd {
+		font-size: 30px;
+		text-align: left;
+		display: table-cell;
+		vertical-align: bottom;
+	}
+}
+
+.total_cart {
+	padding-bottom: 0;
+	margin-bottom: 20px;
+
+	.total__article:after {
+		left: 20px;
+		width: 8px;
+		height: 9px;
+		margin-top: -3px;
+		background-image: url("../img/green-arrow.png");
+	}
+
+	.total__info {
+		padding-bottom: 18px;
+	}
+}

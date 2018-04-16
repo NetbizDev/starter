@@ -1,0 +1,42 @@
+
+/*
+    faq styles
+    version: 04.12.2015
+
+    confirm
+
+*/
+
+/* ------------ confirm ------------ */
+.confirm {
+	color: #444343;
+	font-size: 18px;
+	max-width: 492px;
+	padding-bottom: 40px;
+}
+.confirm strong {
+	display: block;
+	margin-bottom: 4px;
+}
+.confirm p {
+	line-height: 23px;
+}
+.confirm__support {
+	font-size: 15px;
+	line-height: 18px;
+	border-top: 1px solid #e1e2e7;
+	margin: 21px 0;
+	padding: 24px 0;
+}
+.confirm__support a,
+.confirm__support a:visited {
+	font-size: 14px;
+	color: #2ad219;
+}
+.confirm__support a:hover {
+	text-decoration: underline;
+}
+.confirm .btns {
+	width: 237px;
+}
+/* ------------ /confirm ------------ */

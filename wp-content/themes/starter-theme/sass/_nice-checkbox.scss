@@ -1,0 +1,78 @@
+/*----------- nice-checkbox -----------*/
+.nice-checkbox {
+  width: auto;
+  margin: 0 0 5px 0;
+  text-align: right;
+
+  input {
+    width: 16px;
+    cursor: pointer;
+  }
+
+  input[type='checkbox']:not(checked) {
+    position: absolute;
+    opacity: 0;
+  }
+
+  input[type='checkbox']:not(checked) + label {
+    display: inline-block;
+    position: relative;
+    padding: 0 21px 0 0;
+    font-size: 11px;
+    line-height: 15px;
+    color: #929191;
+    user-select: none;
+    letter-spacing: 0.8px;
+
+    a,
+    a:visited {
+      color: #929191;
+      text-decoration: underline;
+
+      &:hover { text-decoration: none; }
+    }
+
+    &:before {
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 13px;
+      height: 13px;
+      border-radius: 2px;
+      background: #fff;
+      border: 1px solid #dbdbdb;
+      content: '';
+    }
+
+    &:after {
+      position: absolute;
+      top: 5px;
+      right: 3px;
+      width: 7px;
+      height: 6px;
+      background: url(../img/check-icon.png) no-repeat;
+      background-size: contain;
+      opacity: 0;
+      transition: opacity .3s ease-in-out;
+      content: '';
+    }
+  }
+
+
+  input[type='checkbox']:checked + label:after {
+    opacity: 1;
+    user-select: none;
+  }
+
+  a,
+  a:visited {
+    float: left;
+    color: #929191;
+    text-decoration: underline;
+    font-size: 11px;
+    line-height: 15px;
+
+    &:hover { text-decoration: none; }
+  }
+}
+/*----------- /nice-checkbox -----------*/

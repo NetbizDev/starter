@@ -1,0 +1,126 @@
+
+/* tabs */
+
+/* ------------ tabs ------------ */
+.tabs {
+  
+  &__controls {
+	position: relative;
+	padding: 20px 0 12px;
+  }
+
+  &__controls-main {
+	display: inline-block;
+	position: relative;
+	margin: 0 0 7px 4px;
+	padding: 0 0 0 14px;
+	color: #2e343b;
+	font-size: 20px;
+	line-height: 20px;
+	cursor: pointer;
+	user-select: none;
+	transition: opacity 300ms ease-in-out;
+  }
+
+  &__controls-main:after {
+	position: absolute;
+	top: 7px;
+	left: 0;
+	border: 4px solid transparent;
+	border-top: 5px solid #2e343b;
+	content: '';
+  }
+
+  &__controls-wrap {
+	opacity: 0;
+	visibility: hidden;
+	z-index: 10;
+	position: absolute;
+	top: 44px;
+	right: 0;
+	padding: 10px;
+	border-radius: 3px;
+	border: 1px solid #e1e1e1;
+	background: #f0f0f0;
+	color: #717171;
+	font-size: 18px;
+	line-height: 18px;
+	text-align: right;
+	transition: opacity 300ms ease-in-out, visibility 300ms ease-in-out;
+  }
+
+  &__controls-wrap.active {
+	opacity: 1;
+	visibility: visible;
+  }
+
+  &__controls-item {
+	display: inline-block;
+	position: relative;
+	padding: 5px;
+	font-size: 15px;
+	color: #262626;
+	@include pauza-fot-book();
+	cursor: pointer;
+	user-select: none;
+  }
+
+  &__controls-line.active .tabs__controls-item { @include pauza-fot-bold(); }
+
+  &__controls-item:hover:before { transform: translateX(-3px); }
+
+  &__wrapper { position: relative; }
+
+  &__layout { display: none; }
+}
+/* ------------ /tabs ------------ */
+
+@media (min-width: 992px) {
+
+	/* ------------ tabs ------------ */
+	.tabs {
+	  display: flex;
+	  position: relative;
+	  min-height: 150px;
+	  padding: 30px 0 0 0;
+
+	  &__controls {
+		width: 200px;
+		padding: 0;
+		margin-left: 15px;
+	  }
+
+	  &__wrapper { padding-top: 5px; }
+
+	  &__controls-wrap {
+		opacity: 1;
+		visibility: visible;
+		position: relative;
+		top: auto;
+		right: auto;
+		z-index: 1;
+		border-radius: 0;
+		border: none;
+		background: none;
+		padding: 0;
+	  }
+
+	  &__controls-main { display: none; }
+
+	  &__controls-item:before {
+		position: absolute;
+		top: 10px;
+		left: -5px;
+		width: 5px;
+		height: 7px;
+		background: transparent url(../img/green-arrow.png) 0 center no-repeat;
+		background-size: 100% 100%;
+		transition: transform .2s ease-in-out;
+		content: '';
+	  }
+
+	  &__controls-line { margin-bottom: 4px; }
+	}
+	/* ------------ /tabs ------------ */
+
+}

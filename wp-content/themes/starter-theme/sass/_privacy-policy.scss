@@ -1,0 +1,25 @@
+.privacy-policy-page {
+	.the-content {
+		font-size: 30px;
+		line-height: 1.5;
+
+		h1 {
+			font-size: 1em;
+		}
+
+		h2 {
+			font-size: 0.7em;
+		}
+
+		ul {
+			padding: 0 18px 20px 0;
+			font-size: 0.5em;
+			list-style: disc;
+
+			ul {
+				font-size: 1em;
+				list-style: circle;
+			}
+		}
+	}
+}

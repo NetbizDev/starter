@@ -1,0 +1,6 @@
+{
+    "require": {
+        "automattic/woocommerce": "^1.0",
+        "facebook/php-sdk-v4" : "~5.0"
+    }
+}

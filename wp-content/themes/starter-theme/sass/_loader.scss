@@ -1,0 +1,76 @@
+.loader {
+
+  > span {
+    position: absolute;
+    height: 22px;
+    width: 22px;
+    border-radius: 12px;
+    background-color: rgb(255,255,255);
+    animation-name: f_fadeG;
+    animation-duration: 1.2s;
+    animation-iteration-count: infinite;
+    animation-direction: normal;
+
+    &:nth-child( 1 ) {
+      top: 51px;
+      left: 0;
+      animation-delay: 0.45s;
+    }
+
+    &:nth-child( 2 ) {
+      top: 15px;
+      left: 15px;
+      animation-delay: 0.6s;
+    }
+
+    &:nth-child( 3 ) {
+      top: 0;
+      left: 51px;
+      animation-delay: 0.75s;
+    }
+
+    &:nth-child( 4 ) {
+      top: 15px;
+      right: 15px;
+      animation-delay: 0.9s;
+    }
+
+    &:nth-child( 5 ) {
+      top: 51px;
+      right: 0;
+      animation-delay: 1.05s;
+    }
+
+    &:nth-child( 6 ) {
+      right: 15px;
+      bottom: 15px;
+      animation-delay: 1.2s;
+    }
+
+    &:nth-child( 7 ) {
+      right: 15px;
+      bottom: 15px;
+      animation-delay: 1.2s;
+    }
+
+    &:nth-child( 8 ) {
+      bottom: 15px;
+      left: 15px;
+      animation-delay: 1.5s;
+    }
+
+  }
+
+}
+
+@keyframes f_fadeG{
+
+  0% {
+    background-color:rgb(0,0,0);
+  }
+
+  100% {
+    background-color:rgb(255,255,255);
+  }
+
+}

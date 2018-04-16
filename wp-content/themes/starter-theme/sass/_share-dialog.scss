@@ -1,0 +1,129 @@
+.product-share-dialog {
+  visibility: hidden;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, .79);
+  z-index: -3;
+  opacity: 0;
+  transition: visibility 0s, opacity 0.2s ease-in-out;
+
+  &.active {
+    visibility: visible;
+    opacity: 1;
+    z-index: 5;
+  }
+
+  .dialog-contents {
+    position: relative;
+    margin: 20px;
+    padding: 30px;
+    background: #fff;
+  }
+
+  .dialog-close {
+    @extend .popup__close;
+    top: 19px;
+    right: 20px;
+  }
+
+  .dialog-product-info {
+    text-align: center;
+    padding-bottom: 30px;
+    border-bottom: 1px solid #e8e8e8;
+    margin-bottom: 30px;
+
+    .share-image {
+      height: 140px;
+      margin: 0 auto 20px;
+      background: no-repeat center;
+      background-size: contain;
+    }
+
+  }
+
+  .dialog-links {
+
+    .dialog-links-title {
+      font-size: 28px;
+      color: #2ad219;
+      text-align: center;
+    }
+
+    .link-input {
+      width: 100%;
+      border: 1px solid #dbdbdb;
+      height: 40px;
+      padding: 0 10px;
+      font-size: 14px;
+      text-align: left;
+      color: #575757;
+      @include pauza-fot-book();
+    }
+
+    .follow-us {
+      padding: 20px;
+    }
+
+    .follow-us a {
+      width: 28px;
+      height: 28px;
+      margin: 0 5px 0;
+    }
+  }
+
+}
+
+@media (min-width: 992px) {
+  $dialog-height: 300px;
+  $dialog-width: 625px;
+
+  .product-share-dialog {
+
+    .dialog-contents {
+      margin: - ($dialog-height / 2) auto;
+      top: 50%;
+      width: $dialog-width;
+      max-height: $dialog-height;
+      padding-bottom: 25px;
+      @include justify(justify);
+    }
+
+    .dialog-product-info {
+      display: inline-block;
+      vertical-align: top;
+      width: 40%;
+      text-align: center;
+      border-bottom: none;
+      border-left: 1px solid #e8e8e8;
+      margin-bottom: 0;
+      padding: 17px 0 0 30px;
+
+      .share-image {
+        margin-bottom: 18px;
+      }
+    }
+
+    .dialog-links {
+      display: inline-block;
+      vertical-align: top;
+      width: 55%;
+      text-align: center;
+      padding-top: 53px;
+      padding-left: 17px;
+
+      .link-input {
+        text-align: left;
+        width: 233px;
+      }
+
+      .follow-us {
+        padding: 21px 20px;
+        margin-bottom: 3px;
+      }
+    }
+  }
+
+}

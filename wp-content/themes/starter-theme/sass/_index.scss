@@ -1,0 +1,49 @@
+.index {
+	.index__header {
+		z-index: 2;
+		position: relative;
+
+		.cover-img {
+			width: 100%;
+			height: auto;
+			padding-bottom: 10px;
+		}
+
+		.btn,
+		.header-text {
+			margin-bottom: 20px;
+		}
+
+		.header-text {
+			text-align: center;
+		}
+	}
+}
+
+@media (min-width: 768px) {
+	.index {
+		.activities-menu-container {
+			display: none;
+		}
+	}
+}
+
+@media (min-width: 992px) {
+	.index {
+		.index__header {
+			.cover-img {
+				padding: 0;
+			}
+
+			.header-text {
+				display: none;
+			}
+
+			.btn {
+				position: absolute;
+				right: 23%;
+				top: 70%;
+			}
+		}
+	}
+}

@@ -1,0 +1,20 @@
+/* ------------ activities-list ------------ */
+.activities-list {
+  text-align: center;
+
+  .activity-item {
+    display: inline-block;
+    vertical-align: middle;
+    margin: 0 4px;
+    font-size: 30px;
+    color: #a4a4a4;
+  }
+}
+
+@media (min-width: 992px) {
+  .activities-list {
+    margin-bottom: 8px;
+    text-align: right;
+  }
+}
+/* ------------ /activities-list ------------ */

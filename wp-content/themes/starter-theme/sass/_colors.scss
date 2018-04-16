@@ -1,0 +1,271 @@
+/*---------- about-us ----------*/
+$about-us-title-back: url("../img/bg-mobile_about-us.jpg");
+$about-us-text-color: #575757;
+$about-us-strong-text-color: #000;
+/*---------- /about-us ----------*/
+
+/*---------- accord ----------*/
+$accord-arrow-back: url("../img/green-arrow.png");
+$accord-content: #575757;
+$accord-header: #262626;
+$accord-active-header: #2ad219;
+/*---------- /accord ----------*/
+
+/*---------- ares-select ----------*/
+$ares-select-color: #575757;
+$ares-select-border: #dbdbdb;
+$ares-select-arrow-back: url(../img/green-arrow.png);
+$ares-select-back: #fff;
+$ares-select-active-color: #2ad219;
+$ares-select-size-active-color: #fff;
+$ares-select-size-active-back: #2ad219;
+/*---------- /ares-select ---------*/
+
+/* ------------ authorize ------------ */
+$authorize-error-color: #ff0000;
+$authorize-title-color: #262626;
+$authorize-wrap-bg: #fff;
+$authorize-wrap-border: #e8e8e8;
+$authorize-link: #2ad219;
+$authorize-form-border: #e8e8e8;
+$authorize-input-border: #dbdbdb;
+$authorize-form-txt: #575757;
+$authorize-gender-shadow: #d2d2d2;
+$authorize-gender-input-border: #d2d2d2;
+$authorize-radio-not-checked-bg: #fff;
+$authorize-radio-checked-bg: #2ad219;
+$authorize-check-label: #525151;
+$authorize-info: #555;
+$authorize-form_nice-border: #e7e7e7;
+/* ------------ /authorize ------------ */
+
+/*---------- block-links-bar ----------*/
+$block-links-bar-back: rgba(255, 255, 255, 0.92);
+$block-links-bar-arrow: url("../img/green-arrow.png");
+$block-links-bar-lnk: #2ad219;
+$block-links-bar-description: #262626;
+$block-links-bar-border: #dfdde0;
+/*---------- /block-links-bar ----------*/
+
+/*---------- brands-slider ----------*/
+$brands-slider-back: rgba( 42, 210, 25, 0.851 );
+$accord-content: #575757;
+$accord-header: #262626;
+$accord-active-header: #2ad219;
+/*---------- /brands-slider ----------*/
+
+/*---------- btn ----------*/
+$btn-back: #2ad219;
+$btn-back-hover: #252525;
+$btn-color: #fff;
+$btn-green-back-hover: #d9d20d;
+$btn-blue-back: #3b5998;
+$btn-blue-back-hover: #4e87fe;
+$btn-triangle-arrow: url("../img/green-arrow.png");
+$btn-triangle-color: #575757;
+$btn-transp-back: #fff;
+$btn-transp-border: #2ad219;
+$btn-transp-border-hover: #26ae19;
+$btn-transp-color: #2ad219;
+$btn-transp-color-hover: #26ae19;
+$btn-share-back: transparent;
+$btn-share-icon-back: url("../img/btn_share.png");
+$btn-share-icon-back-hover: url("../img/btn_share_hover.png");
+$btn-share-color: #2ad219;
+/*---------- /btn ----------*/
+
+/*---------- btns ----------*/
+$btns-back: #2ad219;
+$btns-back-hover: #d9d20d;
+$btns-2-back: #262626;
+$btns-2-back-hover: #2ad219;
+$btns-color: #fff;
+/*---------- /btns ----------*/
+
+/*---------- cart-menu ----------*/
+$cart-menu-empty-back: url("../img/cart-menu__empty-bg.jpg");
+$cart-menu-empty-color: #262626;
+$cart-menu-shadow: rgba(0,0,0,0.5);
+$cart-menu-top-shadow: rgba(0,0,0,1);
+$cart-menu-aside-back: #eaecf1;
+$cart-menu-aside-color: #1e1e1e;
+$cart-menu-aside-block-border: #d0d1d6;
+$cart-menu-wrap-back: #fff;
+$cart-menu-wrap-border: #e9e9e9;
+$cart-menu-price-color: #2ad219;
+$cart-menu-title-color: #262626;
+$cart-menu-del-color: #8e8e8e;
+$cart-menu-del-color-hover: #2ad219;
+$cart-menu-del-border: #d1d1d1;
+$cart-menu-del-border-hover: #2ad219;
+/*---------- /cart-menu ----------*/
+
+/*---------- characteristics ---------*/
+$characteristics-bg: #e5e8f1;
+$characteristics-color: #171717;
+$characteristics-border: #d2d5de;
+$characteristics-caption-bg: #fff;
+$characteristics-caption-color: #262626;
+/*---------- /characteristics ---------*/
+
+/*---------- faq ----------*/
+$faq-border-color: #e8e8e8;
+$faq-link-color: #2ad219;
+/*---------- /faq ----------*/
+
+/*---------- customer-service ----------*/
+$customer-service-strong-color: #000;
+$customer-service-btn-color: #2ad219;
+$customer-service-border-color: #dbdbdb;
+$customer-service-color: #575757;
+/*---------- /customer-service ----------*/
+
+/*---------- faq ----------*/
+$faq-border-color: #e8e8e8;
+/*---------- /faq ----------*/
+
+/* ------------ filters-close-btn ------------ */
+$filters-close-btn: #fff;
+/* ------------ /filters-close-btn ------------ */
+
+/*---------- footer-menu ----------*/
+$footer-menu__item-color: #d7d7d7;
+/*---------- /footer-menu ---------*/
+
+/*---------- footer-action-menu ----------*/
+$footer-action-menu__layout-border-top: #040404;
+$footer-action-menu__layout-border-bottom: #373737;
+$footer-action-menu__item-color: #d7d7d7;
+/*---------- /footer-action-menu ---------*/
+
+/*---------- goods ----------*/
+$goods-filter-counter: #34d424;
+$goods-main-title-color: #171717;
+$goods-title-color: #262626;
+$goods-title-inner-color: #1a1a1a;
+$goods-item-border: #f0f0f0;
+$goods-price-old-color: #7f7f7f;
+$goods-price-new-color: #2ad21a;
+$goods-info-line: #d6d6d6;
+$goods-sale-bg: #2ad219;
+$goods-sale-color: #fff;
+$goods-top-panel-border: #d1d1d1;
+$goods-top-panel-text: #8e8e8e;
+$goods-top-panel-cross: #c4c4c4;
+$goods-top-panel-hover: #000;
+$goods-color-label-border: #fff;
+$goods-color-label-shadow: #8e8e8e;
+$goods-color-label-border-active: #2ad219;
+/*---------- /goods ----------*/
+
+/*---------- index ----------*/
+$index__top-color: #fff;
+$index__top-text-color: #262626;
+$index__menu-border: #ededed;
+$index__menu-item-color: #262626;
+$index__menu-item-back: #f6f6f6;
+$index__menu-item_clean-back: #fff;
+$index-menu__tile-border: #aab4b7;
+/*---------- /index ---------*/
+
+/*---------- join-us ----------*/
+$join-us__title-color: #2ad219;
+$join-us__inner-color: #575757;
+$join-us__inner-strong-color: #000;
+$join-us__inner-li-color: #525151;
+$join-us__footer-border: #e8e8e8;
+/*---------- /join-us ---------*/
+
+/*---------- product ----------*/
+$single-product: #f6f8fd;
+$product-back: #fff;
+$product__info-color: #171717;
+$product__article-color: #8b8b8b;
+$product__price-color: #2ad219;
+$product__before-back: #e9e9e9;
+$product__pagination-back: #a9a9a9;
+$product__color-border: #dcdcdc;
+$product__color-label-border: #e9e9e9;
+$product__info-size-border: #262626;
+$products-gallery-info-border: #ececed;
+$products-gallery-info-title-color: #171717;
+$products-plus-color: #34d424;
+/*---------- /product ---------*/
+
+/* ------------ popup ------------ */
+$popup__alert-bg: #fff;
+$popup__alert-text: #262626;
+$popup-link-color: #2ad219;
+/* ------------ /popup ------------ */
+
+/*---------- price ----------*/
+$price__del-color: #8b8b8b;
+/*---------- /price ---------*/
+
+/*---------- products-gallery ----------*/
+$products-gallery-back: #fff;
+$products-gallery-btn-color: #171717;
+$products-gallery-title-color: #171717;
+$products-gallery-title-border: #ececed;
+$products-gallery-name-color: #262626;
+$products-gallery-description-color: #575757;
+$products-gallery-slide-border: #575757;
+$products-gallery-arrow-back: url("../img/swiper__arrows_2.png");
+$products-gallery-pic-border: #d6d6d6;
+/*---------- /products-gallery ---------*/
+
+/*---------- site ----------*/
+$site__header-bg: #fff;
+$site__header-border: #d9d9d9;
+$site__header-inner-border: #f2f2f2;
+$site__header-top: #262626;
+$site__header-service-item-border-right: #333;
+$site__header-service-item-border-left: #000;
+$site__header-cart-border: #f2f2f2;
+$site__header-cart-amount-color: #fff;
+$site__header-cart-amount-color-hover: #575757;
+$site__header-cart-amount-back: #2ad219;
+$site__header-name-color: #1f1f1f;
+$site__footer-back: #252525;
+$site__footer-after-back: #fff;
+$site__copyright-color: #8e8e8e;
+$site__subscribe-title-color: #fff;
+$site__subscribe-field-back: #373737;
+$site__subscribe-field-color: #888;
+$site__footer-before-border-top: #353535;
+$site__footer-before-border-bottom: #040404;
+$site__empty-bg: #fff;
+$site__empty-color: #262626;
+$site__empty-border: #dedede;
+/*---------- /site ---------*/
+
+/*---------- technologies  ---------*/
+$technologies-color: #262626;
+/*---------- /technologies  ---------*/
+
+/* ------------ widget ------------ */
+$widget-bg: #fff;
+$widget-title: #262626;
+$widget-border: #f1f1f1;
+$widget-not-checked: #cdcdcd;
+$widget-checked: #51da43;
+$widget-label: #575757;
+$widget-reset-color: #fff;
+$widget-reset-bg: #fa587b;
+$widget-reset-bg-hover: #e3254e;
+/* ------------ /widget ------------ */
+
+/* ------------ woocommerce ------------ */
+$woocommerce-counter: #2ad219;
+/* ------------ /woocommerce ------------ */
+
+/* ------------ price ------------ */
+$price-color: #000;
+$price-old-color: #666;
+$price-new-color: #2ad219;
+/* ------------ /price ------------ */
+
+// Colors
+$primary-color: #171717;
+$secondary-color: #2ad219;
+$light-gray: #f6f8fd;

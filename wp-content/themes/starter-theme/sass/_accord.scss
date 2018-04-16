@@ -1,0 +1,80 @@
+/* accord */
+
+/* ------------ accord ------------ */
+.accord {
+  padding-bottom: 1px;
+
+  &__item {
+    margin-bottom: 17px;
+
+    &:hover .accord__header:before { transform: translateY(2px) rotate(-90deg); }
+
+    &.active .accord__header {
+      color: $accord-active-header;
+
+      &:before { transform: translateY(-2px) rotate(90deg); }
+
+      &:hover:before { transform: translateY(-4px) rotate(90deg); }
+
+    }
+
+  }
+
+  &__header {
+    position: relative;
+    padding-right: 11px;
+    color: $accord-header;
+    font-size: 15px;
+    font-weight: 700;
+    cursor: pointer;
+    user-select: none;
+    transition: color 0.3s ease;
+
+    &:before {
+      position: absolute;
+      width: 7px;
+      height: 8px;
+      top: 3px;
+      right: 0;
+      background: $accord-arrow-back 0 center no-repeat;
+      background-size: contain;
+      transform: rotate(-90deg);
+      transition: transform .2s ease-in-out;
+      content: '';
+    }
+
+  }
+
+  &__content {
+    display: none;
+    padding: 5px 0;
+    color: $accord-content;
+    font-size: 15px;
+  }
+}
+.page-template-faq-page .accord__content {
+  max-width: 525px;
+}
+/* ------------ /accord ------------ */
+
+@media (min-width: 992px) {
+
+  /* ------------ accord ------------ */
+  .accord {
+
+    &__item.active .accord__header:before { transform: translateY(-1px) rotate(90deg); }
+
+    .accord__header:before {
+      top: 3px;
+      width: 6px;
+    }
+
+    &__content {
+      padding: 9px 10px 7px;
+      line-height: 1.45;
+      font-size: 14.1px;
+    }
+  }
+  /* ------------ /accord ------------ */
+
+}

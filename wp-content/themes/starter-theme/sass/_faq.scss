@@ -1,0 +1,45 @@
+/* faq */
+
+/* ------------ faq ------------ */
+.faq {
+
+  .sub-title {
+	margin-bottom: 6px;
+	font-size: 26px;
+	@include pauza-fot-book();
+  }
+
+  p {
+	margin-bottom: 1px;
+	font-size: 18px;
+	line-height: 1;
+  }
+
+  .tabs {
+	border-top: 1px solid $faq-border-color;
+	margin-top: 25px;
+  }
+
+	a {
+		display: inline-block;
+		color: $faq-link-color;
+		border-bottom: 1px solid transparent;
+		line-height: 1;
+		-webkit-transition: border-bottom 0.3s ease;
+		transition: border-bottom 0.3s ease;
+
+		&:hover {
+			border-bottom: 1px solid $faq-link-color;
+		}
+	}
+
+}
+/* ------------ /faq ------------ */
+
+@media (min-width: 1200px) {
+
+	/* ------------ faq ------------ */
+	.faq { padding: 60px 164px 50px 202px; }
+	/* ------------ /faq ------------ */
+
+}

@@ -1,0 +1,22 @@
+.site__content {
+	margin-left: $site-content-small-side-margin;
+	margin-right: $site-content-small-side-margin;
+}
+
+@media (min-width: 768px) {
+
+	/* --------------- site --------------- */
+	.site__content {
+		margin-left: $site-content-medium-side-margin;
+		margin-right: $site-content-medium-side-margin;
+	}
+}
+
+@media (min-width: 992px) {
+
+	/* --------------- site --------------- */
+	.site__content {
+		margin-left: $site-content-large-side-margin;
+		margin-right: $site-content-large-side-margin;
+	}
+}

@@ -1,0 +1,52 @@
+.footer-menus-container {
+  display: none;
+}
+
+// General styles for all .footer-menu
+.footer-menu {
+  font-size: $footer-menus-font-size;
+  color: $footer-menu__item-color;
+}
+
+.footer-mobile-menu {
+  font-size: 0;
+
+  .menu-item {
+    display: inline-block;
+    vertical-align: top;
+    font-size: 14px;
+
+    &:not(:last-child) {
+      padding-left: 7px;
+    }
+  }
+}
+
+.footer-action-menu {
+  display: none;
+}
+
+@media (min-width: 992px) {
+  .footer-menu {
+    display: inline-block;
+    vertical-align: top;
+    padding-left: 20%;
+
+    &.footer-mobile-menu {
+      display: none;
+    }
+
+    .menu-item {
+      display: block;
+      line-height: 2;
+
+      &:hover {
+        text-decoration: underline;
+      }
+
+      a {
+        display: block;
+      }
+    }
+  }
+}

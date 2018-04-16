@@ -1,0 +1,40 @@
+.breadcrumbs {
+	padding: 25px 30px 0;
+	margin: 0 auto 20px;
+	font-size: 12px;
+
+	> * {
+		display: inline-block;
+	}
+
+	.delimiter {
+		vertical-align: middle;
+		font-size: 0.3em;
+
+		&:before {
+			content: "";
+			display: inline-block;
+			width: 0;
+			height: 0;
+			margin: 0 1em;
+			border-style: solid;
+			border-width: 0.8em 1.385em 0.8em 0;
+			border-color: transparent black transparent transparent;
+		}
+	}
+
+	.crumb-link {
+		vertical-align: top;
+		border-bottom: 1px solid transparent;
+		color: #8e8e8e;
+		transition: border-bottom 0.3s ease;
+
+		&:hover { border-bottom: 1px solid #8e8e8e; }
+	}
+}
+
+@media (min-width: 992px) {
+	.breadcrumbs {
+		margin-bottom: 25px;
+	}
+}

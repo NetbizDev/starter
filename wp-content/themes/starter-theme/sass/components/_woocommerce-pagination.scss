@@ -1,0 +1,47 @@
+.woocommerce-pagination {
+	font-size: 18px;
+	text-align: center;
+
+	ul {
+		padding-bottom: 20px;
+
+		.page-numbers {
+			display: block;
+			width: 30px;
+			height: 30px;
+			border-radius: 50%;
+			line-height: 30px;
+			color: #fff;
+			background-color: #d6d6d6;
+
+			&.prev,
+			&.next {
+				line-height: 35px;
+			}
+
+			&.current {
+				background-color: $secondary-color;
+			}
+		}
+	}
+
+	li {
+		display: inline-block;
+		vertical-align: top;
+		padding: 0 5px;
+	}
+}
+
+@media (min-width: 992px) {
+	.woocommerce-pagination {
+		ul {
+			.page-numbers {
+				transition: background-color 0.2s ease;
+
+				&:hover {
+					background-color: $secondary-color;
+				}
+			}
+		}
+	}
+}

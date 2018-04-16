@@ -1,0 +1,146 @@
+/* join-us */
+
+/*---------- join-us --------*/
+.join-us {
+
+	.join-us__card {
+		margin-bottom: 20px;
+
+		img {
+			display: block;
+			max-width: 100%;
+			height: auto;
+			margin: 0 auto;
+		}
+	}
+
+	.join-us__title {
+		margin-bottom: 23px;
+		color: $join-us__title-color;
+		font-size: 26px;
+		@include pauza-fot-bold();
+		font-weight: 400;
+	}
+
+	.join-us__content {
+		p {
+			max-width: 335px;
+			margin-bottom: 8px;
+			color: $join-us__inner-color;
+			font-size: 14px;
+			line-height: 1.4;
+		}
+
+		strong {
+			color: $join-us__inner-strong-color;
+			font-size: 16px;
+			line-height: 19px;
+			font-weight: 700;
+		}
+
+		ul {
+			padding: 19px 0 6px 0;
+		}
+
+		li {
+			display: block;
+			position: relative;
+			padding-right: 22px;
+			margin-bottom: 16px;
+			color: $join-us__inner-li-color;
+			font-size: 15px;
+			@include pauza-fot-bold();
+
+			&:before {
+				position: absolute;
+				top: 0;
+				right: 0;
+				width: 11px;
+				height: 10px;
+				background: url(../img/check-icon.png) no-repeat;
+				background-size: contain;
+				content: '';
+			}
+		}
+	}
+
+	.join-us__footer {
+		padding-top: 30px;
+		border-top: 1px solid $join-us__footer-border;
+
+		.btn {
+			height: 31px;
+			font-size: 15px;
+		}
+	}
+
+	.join-us__price {
+		display: block;
+		margin-bottom: 20px;
+
+		&-text,
+		.price-wrap {
+			display: inline-block;
+			vertical-align: middle;
+		}
+
+		.product-price {
+			display: block;
+		}
+	}
+}
+
+@media (min-width: 992px) {
+
+	.join-us {
+		padding: 37px 30px 13px;
+		direction: ltr;
+		@include justify(justify);
+
+		.join-us__card {
+			display: inline-block;
+			vertical-align: top;
+			width: 48.5%;
+			margin-bottom: 0;
+		}
+
+		.join-us__inner {
+			display: inline-block;
+			vertical-align: top;
+			width: 43%;
+			padding: 23px 0 0 0;
+			direction: rtl;
+			text-align: right;
+		}
+
+		.join-us__footer {
+			padding: 26px 0 0;
+			@include justify(justify);
+
+			.btn {
+				display: inline-block;
+				vertical-align: middle;
+				width: 158px;
+			}
+		}
+
+		.join-us__price {
+			display: inline-block;
+			vertical-align: top;
+			padding-top: 8px;
+			margin: 0;
+		}
+	}
+}
+
+@media (min-width: 1200px) {
+
+	.join-us {
+
+		.join-us__inner {
+			padding-right: 130px;
+		}
+	}
+}
+
+/*---------- /join-us --------*/

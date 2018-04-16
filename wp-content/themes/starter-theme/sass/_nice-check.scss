@@ -1,0 +1,103 @@
+/*----------- nice-check -----------*/
+.nice-check {
+  position: relative;
+  font-size: 16px;
+
+  input[type=checkbox] {
+    clip: rect(0, 0, 0, 0);
+    position: absolute;
+
+    &:checked + label {
+      color: #575757;
+
+      &:after {
+        border-color: $secondary-color;
+        color: $secondary-color;
+        content: $content-check-mark;
+      }
+
+    }
+
+  }
+
+  label {
+    padding-right: 25px;
+    color: #d4d4d4;
+    user-select: none;
+    cursor: pointer;
+
+    &:after {
+      display: inline-block;
+      position: absolute;
+      top: -1px;
+      right: 0;
+      width: 17px;
+      height: 17px;
+      border: 1px solid #d4d4d4;
+      border-radius: 50%;
+      font-size: 0.7em;
+      line-height: 1.8;
+      text-align: center;
+      transition: border 0.3s ease-in-out;
+      content: "";
+    }
+  }
+
+  .nice-check__warning {
+    position: absolute;
+    bottom: -22px;
+    right: 0;
+    opacity: 0;
+    visibility: hidden;
+    padding-top: 5px;
+    color: #ff0000;
+    font-size: 18px;
+    transition: opacity 0.3s ease,visibility 0.3s ease;
+  }
+
+  &.nice-check_error {
+
+    .nice-check__warning {
+      opacity: 1;
+      visibility: visible;
+    }
+
+  }
+
+}
+.nice-check_2 {
+
+  input[type=checkbox] {
+
+    &:checked + label {
+      color: #fff;
+
+      &:after {
+        border-color: #d4d4d4;
+      }
+
+    }
+
+  }
+
+  label {
+    color: #fff;
+
+    a {
+      color: $secondary-color;
+      border-bottom: 1px solid $secondary-color;
+      -webkit-transition: border-bottom 0.3s ease;
+      transition: border-bottom 0.3s ease;
+
+      &:hover {
+        border-bottom: 1px solid transparent;
+      }
+    }
+
+    &:after {
+      border-radius: 0;
+    }
+  }
+
+}
+/*----------- /nice-check -----------*/

@@ -1,0 +1,66 @@
+/* btn */
+
+
+/* --------------- form-required --------------- */
+/* TODO: remove --> empty should be replaced with woocommerce invalid class. This file needs refactoring!  */
+.form-required {
+
+  input {
+    padding-left: 20px;
+    transition: border .3s ease;
+  }
+
+  textarea { transition: border .3s ease; }
+
+  input:focus {
+    border-color: #2ad219;
+    background-image: none;
+  }
+
+  .empty {
+    border-color: #F10E0E;
+    background-image: url("../img/empty.png");
+    background-repeat: no-repeat;
+    background-position: 10px center;
+  }
+
+  textarea.empty {
+    background-image: none;
+  }
+}
+
+.form-row { 
+
+  &.woocommerce-invalid {
+
+    > input,
+    > textarea {
+      border-color: #F10E0E;
+      background-image: url("../img/empty.png");
+      background-repeat: no-repeat;
+      background-position: 10px center ;
+    }
+  }
+
+  > input, 
+  > textarea {
+    border: 1px solid #dbdbdb;
+    transition: border .3s ease;
+  
+    &:focus {
+      border-color: #2ad219;
+      background-image: none; 
+    }
+  }
+
+}
+
+.wpcf7-form {
+  .wpcf7-not-valid {
+    border-color: #F10E0E;
+    background-image: url("../img/empty.png");
+    background-repeat: no-repeat;
+    background-position: 10px center;
+  }
+}
+/* --------------- /form-required --------------- */

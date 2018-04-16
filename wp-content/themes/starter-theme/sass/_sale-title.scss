@@ -1,0 +1,16 @@
+.sale-title {
+  display: inline-block;
+  vertical-align: top;
+  margin: -10px 0 -4px 0;
+  color: #fff;
+  @include lobster();
+  font-size: 30px;
+  line-height: 30px;
+  transform: rotate(-10deg);
+
+  &.sale-title_green {
+    margin: -11px -23px 0 -2px;
+    color: #2ad219;
+  }
+
+}

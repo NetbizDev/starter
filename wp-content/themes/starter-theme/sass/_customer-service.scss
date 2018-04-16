@@ -1,0 +1,211 @@
+/*
+    customer-service styles
+    version: 18.01.2013
+
+    customer-service
+
+*/
+
+/* ------------ customer-service ------------ */
+.customer-service {
+	color: $customer-service-color;
+
+	.sub-title {
+		font-size: 25px;
+		margin-bottom: 5px;
+	}
+
+	strong {
+		display: block;
+		font-size: 16px;
+		color: $customer-service-strong-color;
+		margin-bottom: 19px;
+	}
+
+	&__faq {
+		margin-bottom: 20px;
+
+		&-list {
+			padding: 19px 0 0;
+			margin-bottom: 5px;
+			@include justify(justify);
+
+			.btn:before {
+				left: auto;
+				right: -12px;
+			}
+		}
+
+		&-column {
+			display: inline-block;
+			vertical-align: top;
+			width: 40%;
+		}
+
+		&-line {
+			display: block;
+			margin-bottom: 15px;
+		}
+
+		.btn {
+			margin-right: 12px;
+			font-size: 13px;
+			text-align: right;
+
+			&:before {
+				width: 6px;
+				height: 7px;
+				margin-top: -5px;
+				left: -12px;
+			}
+		}
+
+		&-page .btn {
+			color: $customer-service-btn-color;
+			font-size: 15px;
+		}
+	}
+
+	&__connect {
+		margin-bottom: 20px;
+
+		strong {
+			margin-bottom: 25px;
+		}
+
+		input,
+		textarea {
+			display: block;
+			width: 100%;
+			margin-bottom: 7px;
+			border: 1px solid $customer-service-border-color;
+			font-size: 16px;
+			text-align: right;
+			direction: rtl;
+			color: $customer-service-color;
+			@include pauza-fot-book;
+		}
+
+		.wpcf7-form {
+			.ares-select {
+				text-align: right;
+			}
+
+			p:last-of-type {
+				text-align: left;
+			}
+		}
+
+		input {
+			height: 40px;
+			padding: 0 12px;
+		}
+
+		.wpcf7-not-valid-tip {
+			direction: rtl;
+		}
+
+		div.wpcf7-response-output {
+			text-align: right;
+			direction: rtl;
+		}
+
+		textarea {
+			height: 74px;
+			padding: 10px 12px;
+			resize: none;
+		}
+
+
+
+		.btn {
+			display: inline-block;
+			width: auto;
+			border: none;
+			padding: 0 2em;
+			font-size: 15px;
+			color: #fff;
+		}
+	}
+
+	&__address {
+		font-style: normal;
+
+		a,
+		a:visited {
+			font-size: 20px;
+			color: $customer-service-btn-color;
+			font-weight: 700;
+			cursor: default;
+		}
+
+		&-work-time {
+			display: block;
+			padding-top: 7px;
+			font-size: 16px;
+
+			dt {
+				display: inline-block;
+				vertical-align: top;
+				width: 37px;
+			}
+
+			dd {
+				display: inline-block;
+				vertical-align: top;
+			}
+		}
+	}
+
+}
+
+/* ------------ /customer-service ------------ */
+
+@media (min-width: 992px) {
+
+	/* ------------ customer-service ------------ */
+	.customer-service {
+		position: relative;
+		margin-bottom: -16px;
+		@include justify(justify);
+
+		&__faq {
+			display: inline-block;
+			vertical-align: top;
+			width: 264px;
+			text-align: right;
+		}
+
+		&__address {
+			display: inline-block;
+			vertical-align: top;
+			width: 195px;
+			padding-top: 30px;
+			text-align: right;
+		}
+
+		&__connect {
+			display: inline-block;
+			vertical-align: top;
+			width: calc(100% - 490px);
+			max-width: 480px;
+			padding-right: 20px;
+			margin-bottom: 0;
+			border-right: 1px solid $customer-service-border-color;
+			text-align: right;
+
+		}
+	}
+	/* ------------ /customer-service ------------ */
+
+}
+
+@media (min-width: 1200px) {
+
+	/* ------------ about-us ------------ */
+	.customer-service {
+		padding: 60px 140px 50px;
+	}
+	/* ------------ /about-us ------------ */
+
+}

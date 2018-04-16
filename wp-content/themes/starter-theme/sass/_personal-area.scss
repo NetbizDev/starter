@@ -1,0 +1,399 @@
+/* ------------ personal-area ------------ */
+.woocommerce-account {
+	.input-text {
+		width: 100%;
+		height: 40px;
+		display: block;
+		margin-bottom: 9px;
+		padding: 0 12px;
+		border: 1px solid #dbdbdb;
+		font-size: 16px;
+		color: #575757;
+		@include pauza-fot-book;
+	}
+}
+
+.personal-area {
+	min-height: 400px;
+	padding: 0 10px;
+	background-color: #fff;
+
+	.form-section {
+		padding-bottom: 25px;
+
+		.title {
+			font-size: 20px;
+			padding-bottom: 0.5em;
+			color: #575757;
+		}
+	}
+}
+
+.personal-area__info {
+	.customer-name {
+		font-size: 23px;
+		padding: 4px 0 8px;
+	}
+
+	.membership-pill {
+		margin-left: 20px;
+		padding: 1px 8px;
+		border-radius: 50px;
+		color: #fff;
+		background-color: #2ad219;
+	}
+}
+
+.personal-area__info-photo {
+	overflow: hidden;
+	float: right;
+	width: 59px;
+	height: 59px;
+	margin-left: 20px;
+	border-radius: 50px;
+
+	.avatar {
+		width: 100%;
+		height: 100%;
+	}
+}
+
+.personal-area__info-person {
+	position: relative;
+	padding-bottom: 32px;
+	overflow: hidden;
+
+	&:after {
+		content: '';
+		position: absolute;
+		right: 0;
+		bottom: 19px;
+		width: 173px;
+		border-bottom: 1px solid #eceaea;
+	}
+}
+
+.personal-area__navigation {
+	overflow: hidden;
+
+	.nav-item {
+		display: block;
+		line-height: 32px;
+
+		&.active .nav-link {
+			@include pauza-fot-bold;
+		}
+	}
+
+	.nav-link.btn {
+		width: 88px;
+		text-align: right;
+	}
+}
+
+.tab-orders-table {
+	display: none;
+}
+
+.empty-orders {
+	padding: 1em 0;
+	font-size: 30px;
+	line-height: 1.3;
+	text-align: center;
+
+	.lobster {
+		@include lobster;
+		direction: ltr;
+	}
+}
+
+.personal-area__more {
+	font-size: 16px;
+	color: #525151;
+
+	.nice-check {
+		padding-bottom: 10px;
+
+		label:after {
+			font-size: 0.6em;
+			line-height: 1.9;
+			top: -3px;
+		}
+	}
+
+	.personal-area__more-item {
+		position: relative;
+		transition: all .3s ease;
+		padding: 15px 10px;
+		background-color: #f7f8fd;
+		border: 1px solid #f0f0f2;
+
+		a {
+			color: #27d514;
+			text-decoration: underline;
+		}
+
+		a:hover {
+			text-decoration: none;
+		}
+
+		//&:after {
+		//	content: "";
+		//	display: inline-block;
+		//	width: 17px;
+		//	height: 17px;
+		//	position: absolute;
+		//	top: 50%;
+		//	right: 10px;
+		//	border: 1px solid #d3d4d8;
+		//	border-radius: 50%;
+		//	margin-top: -10px;
+		//	transition: border .3s ease-in-out;
+		//	background: none;
+		//}
+
+		.personal-area__more-image {
+			margin-left: 15px;
+		}
+
+		.personal-area__more-image,
+		.personal-area__more-text {
+			display: inline-block;
+			vertical-align: middle;
+		}
+	}
+	
+}
+
+.extended-check-passive {
+	display: none;
+}
+
+/* ----------- /personal-area ------------ */
+
+.personal-area__info {
+	margin-bottom: 20px;
+}
+
+.personal-area__wrap {
+	position: relative;
+	border-top: 1px solid #eceaea;
+	padding-top: 15px;
+
+	.edit-account-form {
+		padding: 20px 0;
+	}
+
+	.date-of-birth-wrapper,
+	.gender-wrapper {
+		@include clearfix;
+	}
+
+	.info-label {
+		display: inline-block;
+		float: right;
+		width: 19%;
+		padding: 0 5px 0 0;
+		font-size: 16px;
+		line-height: 40px;
+		color: #575757;
+	}
+
+	.ares-select,
+	.nice-radio {
+		display: inline-block;
+		float: right;
+		width: 27%;
+	}
+
+	.ares-select {
+		&:not(:last-child) {
+			.ares-select__item {
+				border-left: none;
+			}
+		}
+	}
+
+	.nice-radio {
+		line-height: 40px;
+			label {
+				position: relative;
+
+				&:after {
+					top: 1px;
+				}
+			}
+	}
+}
+
+.personal-area__wrap-form {
+	margin-bottom: 25px;
+	border-bottom: 1px solid #eceaea;
+}
+
+.personal-area__wrap-submit {
+	text-align: left;
+	padding-top: 15px;
+
+	.cancel-btn,
+	.save-btn {
+		display: inline-block;
+		vertical-align: middle;
+		width: auto;
+		font-size: 15px;
+	}
+
+	.cancel-btn {
+		margin-left: 20px;
+		color: $primary-color;
+
+		&, &:hover {
+			background: none;
+		}
+	}
+
+	.save-btn {
+		padding: 0 15px;
+		border: none;
+	}
+}
+
+/*
+*   Reset password
+\*============================*/
+.woocommerce-lost-password {
+	.woocommerce {
+		padding: 50px 0;
+	}
+
+	.message {
+		padding-bottom: 10px;
+		line-height: 1.2;
+	}
+
+	.label {
+		display: block;
+		padding: 10px 0;
+	}
+
+	.button {
+		display: inline-block;
+		font-size: 16px;
+	}
+}
+
+@media (min-width: 768px) {
+	.personal-area {
+		padding: 30px 20px;
+	}
+
+	.woocommerce-lost-password {
+		.woocommerce {
+			padding: 100px;
+		}
+
+		.lost_reset_password {
+			max-width: 600px;
+			padding: 50px;
+			margin: 0 auto;
+			background-color: #fff;
+		}
+
+		.label,
+		.input-text {
+			display: inline-block;
+		}
+
+		.label {
+			width: 45%;
+		}
+
+		.input-text {
+			width: 50%;
+			margin-right: 2%;
+		}
+	}
+}
+
+@media (min-width: 992px) {
+
+	.personal-area {
+		position: relative;
+		padding-right: 284px;
+
+		.btn-facebook {
+			position: absolute;
+			top: -65px;
+		}
+	}
+	.personal-area__info {
+		position: absolute;
+		top: 30px;
+		right: 20px;
+		width: 264px;
+	}
+	.personal-area__wrap {
+		padding-top: 0;
+		margin: 75px 0 0;
+	}
+}
+
+@media (min-width: 1200px) {
+
+	.personal-area {
+		padding: 49px 421px 24px 127px;
+	}
+
+	.personal-area__wrap {
+		.info-label {
+			padding: 0;
+		}
+	}
+
+	.personal-info-section {
+		@include justify(justify);
+	}
+
+	.personal-area__info {
+		right: 162px;
+		top: 49px;
+		padding-left: 20px;
+		white-space: nowrap;
+		text-overflow: ellipsis;
+		overflow: hidden;
+	}
+
+	.personal-area__wrap-column {
+		display: inline-block;
+		vertical-align: top;
+		width: 49%;
+
+		$half-width: 49%;
+		$margin-space: 100% - 2 * $half-width;
+		.half-width {
+			width: $half-width;
+		}
+
+		.first-name,
+		.address,
+		.street-number,
+		.apt-number,
+		.city {
+			float: right;
+		}
+
+		.last-name,
+		.postcode {
+			float: left;
+		}
+
+		.address,
+		.street-number {
+			margin-left: $margin-space;
+		}
+		.street-number,
+		.apt-number {
+			width: ($half-width - $margin-space) / 2;
+		}
+	}
+}

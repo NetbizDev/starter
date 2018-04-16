@@ -1,0 +1,61 @@
+.activities-menu-container {
+	.activities-title {
+		height: $mobile-index-menu-item-height;
+		padding: 0 $mobile-index-menu-item-vert-padding;
+		line-height: $mobile-index-menu-item-height;
+	}
+}
+
+.activities-menu {
+	font-size: 0;
+	border-right: 1px solid #aab4b7;
+
+	.menu-item {
+		display: inline-block;
+		vertical-align: top;
+		position: relative;
+		width: 50%;
+		border-bottom: 1px solid #aab4b7;
+		border-left: 1px solid #aab4b7;
+		font-size: 15px;
+		text-align: center;
+		color: #fff;
+	}
+
+	.menu-link {
+		display: block;
+	}
+
+	.activity-image {
+		width: 100%;
+		display: block;
+	}
+
+	.menu-item-content {
+		@include center-vertical;
+		position: absolute;
+		width: 100%;
+
+
+		&:before {
+			display: block;
+			font-size: 2.3em;
+			color: $secondary-color;
+		}
+
+		&:after {
+			content: '';
+			display: block;
+			width: 8px;
+			height: 6px;
+			margin: 5px auto 0;
+			background: url(../img/arrow-sprite.png) 0 100% no-repeat;
+			background-size: 8px 15px;
+		}
+	}
+
+	.activity-name {
+		display: block;
+		line-height: 1.5;
+	}
+}

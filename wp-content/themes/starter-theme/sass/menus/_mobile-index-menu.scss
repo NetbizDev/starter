@@ -1,0 +1,34 @@
+.mobile-index-menu-container {
+	background-color: $main-menu-mobile-bg-color;
+}
+
+.mobile-index-menu {
+	.menu-item {
+		position: relative;
+		height: $mobile-index-menu-item-height;
+		border-bottom: $main-menu-mobile-item-border;
+		line-height: $mobile-index-menu-item-height;
+
+		&:after {
+			@include center-vertical;
+			position: absolute;
+			left: $mobile-index-menu-item-vert-padding;
+			width: 8px;
+			height: 9px;
+			background: $btn-triangle-arrow 0 center no-repeat;
+			background-size: contain;
+			content: '';
+		}
+	}
+
+	a {
+		display: block;
+		padding: 0 $mobile-index-menu-item-vert-padding;
+	}
+}
+
+@media (min-width: 992px) {
+	.mobile-index-menu-container {
+		display: none;
+	}
+}

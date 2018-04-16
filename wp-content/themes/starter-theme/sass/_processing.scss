@@ -1,0 +1,264 @@
+/*
+
+    category styles
+    version: 03.12.2015
+
+    processing
+
+*/
+
+/* --------------- processing --------------- */
+.processing {
+	padding: 0 15px 18px;
+	position: relative;
+	background: #fff;
+
+	&:before {
+		position: absolute;
+		content: '';
+		height: 2px;
+		background: #d7d6d6;
+		top: 0;
+		left: 0;
+		right: 0;
+		z-index: 1;
+	}
+
+	&:after {
+		position: absolute;
+		content: '';
+		height: 2px;
+		background: #2ad219;
+		top: 0;
+		width: calc(50% - 135px);
+		right: 0;
+		z-index: 2;
+	}
+
+	> div {
+		max-width: 960px;
+		position: relative;
+		margin: 0 auto;
+		z-index: 3;
+	}
+
+}
+
+.processing_finish {
+	background: transparent;
+
+	&:after {
+		width: 100%;
+	}
+}
+
+.processing__footer {
+	display: inline-block;
+	width: 100%;
+	border-top: 1px solid #e9e9e9;
+	padding: 26px 0;
+	color: #262626;
+	font-size: 16px;
+	overflow: hidden;
+}
+
+.processing__secure {
+	position: relative;
+	text-align: left;
+
+	> span {
+		display: inline-block;
+		vertical-align: middle;
+		position: relative;
+		padding-right: 15px;
+
+		&:before {
+			content: '';
+			background: url("../img/check-icon.png") no-repeat center;
+			width: 11px;
+			height: 10px;
+			background-size: contain;
+			position: absolute;
+			top: 2px;
+			right: 0;
+		}
+	}
+
+	img {
+		display: inline-block;
+		vertical-align: middle;
+	}
+}
+
+.processing__help {
+	padding: 3px 0;
+
+	li {
+		display: block;
+		margin-bottom: 7px;
+	}
+
+	a,
+	a:visited {
+		display: inline-block;
+		position: relative;
+		color: #262626;
+
+		&:after {
+			content: '';
+			position: absolute;
+			left: -12px;
+			top: 2px;
+			width: 7px;
+			height: 8px;
+			background: transparent url(../img/green-arrow.png) 0 center no-repeat;
+			background-size: 7px 8px;
+			transition: transform .2s ease-in-out;
+		}
+
+		&:hover:after {
+			transform: translateX(-3px);
+		}
+	}
+}
+
+.processing__steps {
+	padding: 10px 0;
+	font-size: 0;
+
+	.step-item {
+		display: inline-block;
+		vertical-align: top;
+		position: relative;
+		font-size: 0;
+		color: #949393;
+
+		&:after {
+			display: inline-block;
+			vertical-align: middle;
+			width: 5px;
+			height: 6px;
+			margin: 0 5px;
+			background: url("../img/processing__steps.png");
+			content: '';
+		}
+
+		&.active {
+			color: $secondary-color;
+
+			&:after {
+				background-position: 0 bottom;
+			}
+
+			&:before {
+				position: absolute;
+				top: -10px;
+				left: 0;
+				right: 0;
+				height: 2px;
+				background: $secondary-color;
+				content: '';
+			}
+		}
+
+		&:last-child:after {
+			display: none;
+		}
+	}
+
+	.step-title {
+		display: inline-block;
+		vertical-align: middle;
+		font-size: 18px;
+	}
+}
+
+/* --------------- /processing --------------- */
+
+@media (min-width: 768px) {
+
+	/* --------------- processing --------------- */
+	.processing {
+
+		&:after {
+			width: calc(50% - 349px);
+		}
+	}
+
+	.processing__steps {
+		padding: 37px 0;
+
+		.step-item {
+			&:after {
+				margin: 0 10px;
+			}
+
+			&.active:before {
+				top: -37px;
+			}
+		}
+
+		.step-title {
+			font-size: 30px;
+		}
+	}
+
+	.processing__footer .processing__secure,
+	.processing__footer .processing__help {
+		width: 50%;
+		float: left;
+	}
+
+	.processing_finish:after {
+		width: 100%;
+	}
+	/* --------------- /processing --------------- */
+}
+
+@media (min-width: 1200px) {
+
+	/* --------------- processing --------------- */
+	.processing {
+
+		&:after {
+			width: calc(50% - 480px);
+		}
+
+		> div {
+			@include justify(justify);
+
+			> div {
+				text-align: right;
+				display: inline-block;
+			}
+		}
+	}
+
+	.processing__aside {
+		width: 333px;
+		display: inline-block;
+		vertical-align: top;
+	}
+
+	.processing__content {
+		width: 494px;
+		display: inline-block;
+		vertical-align: top;
+	}
+
+	.processing__steps {
+		//display: block !important;
+
+		.step-item {
+			&:after {
+				margin: 0 15px;
+			}
+		}
+	}
+
+	.processing_finish {
+		background: url("../img/processing-finish-bg.png") no-repeat bottom left;
+		min-height: 525px;
+	}
+	/* --------------- /processing --------------- */
+}

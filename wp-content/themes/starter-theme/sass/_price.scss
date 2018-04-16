@@ -1,0 +1,47 @@
+/*
+*   Product price
+\*============================*/
+.price-wrap {
+
+}
+
+.product-price {
+  display: inline-block;
+  color: $price-color;
+
+  ins {
+    color: $price-color;
+  }
+
+  del {
+    display: inline;
+    color: $price-old-color;
+    /*text-decoration: line-through;*/
+  }
+
+  .club-members-price {
+    color: $price-new-color;
+  }
+
+}
+
+.amount {
+  font-size: 1em;
+
+  .currency-symbol {
+    font-size: 0.6em;
+    margin-right: 2px;
+  }
+}
+
+.quanty-price {
+  .product-quantity,
+  .product-price {
+    vertical-align: middle;
+  }
+
+  .product-quantity {
+    display: inline-block;
+    font-size: 0.8em;
+  }
+}

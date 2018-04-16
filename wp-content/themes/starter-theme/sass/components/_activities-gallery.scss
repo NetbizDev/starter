@@ -1,0 +1,124 @@
+.activities-gallery {
+	position: relative;
+
+	.gallery {
+		direction: ltr;
+		max-width: 960px;
+	}
+
+	.nav-arrow {
+		z-index: 3;
+	}
+
+	.activity {
+		width: 115px;
+		position: relative;
+		display: block;
+		margin: 0 auto;
+		text-align: center;
+
+		&:before {
+			position: absolute;
+			bottom: 0;
+			left: 0;
+			width: 100%;
+			font-size: 30px;
+			color: #fff;
+			transform: translateY(-100%);
+			transition: color 0.3s ease;
+		}
+	}
+
+	.activity-image {
+		display: block;
+		width: 100%;
+	}
+
+	.activity-name {
+		position: absolute;
+		bottom: 7px;
+		left: 0;
+		width: 100%;
+		padding-top: 4px;
+
+		&:before {
+			content: '';
+			position: absolute;
+			width: 100%;
+			height: 1px;
+			top: 0;
+			left: 0;
+			z-index: 2;
+			background: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.9) 50%, rgba(255, 255, 255, 0) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+		}
+
+		.btn {
+			display: inline-block;
+			color: #fff;
+			position: relative;
+			z-index: 2;
+			font-size: 14px;
+		}
+	}
+}
+
+@media (min-width: 768px) {
+	.activities-gallery {
+		.activity {
+			width: 100%;
+		}
+	}
+}
+
+@media (min-width: 992px) {
+	.activities-gallery {
+
+		.gallery {
+
+			&:before,
+			&:after {
+				content: '';
+				position: absolute;
+				width: 50px;
+				top: 40px;
+				bottom: 40px;
+				left: 0;
+				z-index: 2;
+				background: linear-gradient(to right, rgba(#000, 0.8) 0%, rgba(#000, 0) 100%);
+			}
+
+			&:after {
+				left: auto;
+				right: 0;
+				background: linear-gradient(to right, rgba(#000, 0) 0%, rgba(#000, 0) 1%, rgba(#000, 0.8) 100%);
+			}
+		}
+
+		.activity {
+			&:before {
+				font-size: 45px;
+			}
+
+			&:hover {
+				&:before { color: $secondary-color; }
+				.btn_triangle:before {
+					transform: translateX(-3px);
+				}
+			}
+		}
+
+		.activity-name {
+			bottom: 13px;
+			padding-top: 12px;
+		}
+	}
+}
+
+@media (max-width: 991px) {
+
+	/* ------------ os-gallery ------------ */
+	.activities-gallery .slide {
+		width: auto !important;
+	}
+	/* ------------ /os-gallery ------------ */
+}

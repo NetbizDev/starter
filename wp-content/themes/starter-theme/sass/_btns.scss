@@ -1,0 +1,31 @@
+/* btns */
+
+/* ------------ btns ------------ */
+.btns {
+  display: inline-block;
+  height: 38px;
+  padding: 0 10px;
+  border: none;
+  border-radius: 38px;
+  background: $btns-back;
+  font-size: 20px;
+  @include pauza-fot-bold();
+  color: $btns-color;
+  text-align: center;
+  transition: background .3s ease;
+
+  &:hover {  background: $btns-back-hover; }
+
+  &.btns_2 {
+    background: $btns-2-back;
+
+    &:hover { background: $btns-2-back-hover; }
+  }
+}
+
+a.btns,
+a.btns:visited {
+  padding: 9px 10px;
+  color: $btns-color;
+}
+/* ------------ /btns ------------ */

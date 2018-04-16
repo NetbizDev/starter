@@ -1,0 +1,281 @@
+.front-page {
+	.banners,
+	.products-gallery {
+		display: none;
+ 	}
+
+	.header_wrapper {
+		background: url("../img/index-head-bg.jpg") no-repeat center;
+		background-size: cover;
+		position: relative;
+		z-index: 1;
+		padding: 127px 30px 49px;
+		margin-bottom: 138px;
+
+		> * {
+			position: relative;
+			z-index: 2;
+		}
+
+		.product-image {
+			position: absolute;
+			bottom: -36px;
+			width: 272px;
+			height: auto;
+			left: -9px;
+			z-index: 3;
+		}
+	}
+
+	.header {
+		color: #fff;
+		padding: 0 0 55px;
+		position: absolute;
+		top: 62px;
+		right: 0;
+		width: 100%;
+		text-align: center;
+
+		> span {
+			display: block;
+			@include pauza-fot-book();
+			font-size: 26px;
+			margin-bottom: 0;
+			text-transform: uppercase;
+			color: #fff;
+			letter-spacing: -0.6px;
+			margin-right: 28px;
+			text-align: right;
+		}
+
+		.title {
+			font-size: 25px;
+		  	@include pauza-fot-bold();
+			color: #fff;
+			text-align: right;
+			text-transform: uppercase;
+			letter-spacing: 0.5px;
+			margin-bottom: 101px;
+			margin-right: 28px;
+		}
+
+		mark {
+			font-size: 16px;
+		  	@include pauza-fot-book();
+			display: block;
+			color: #262626;
+			font-weight: 600;
+			margin: 0 0 0 3px;
+			letter-spacing: 0.7px;
+		}
+
+		.btn {
+			width: 193px;
+			height: 28px;
+			position: absolute;
+			left: 50%;
+			margin: 0 0 0 -93px;
+			bottom: 0;
+			font-size: 17px;
+		}
+
+		.btn span {
+			height: 31px;
+		}
+
+	}
+}
+
+@media (min-width: 768px) {
+	
+	.front-page {
+		.banners,
+		.products-gallery {
+			display: block;
+		}
+
+		.header_wrapper {
+			padding: 100px 100px 175px;
+			margin-bottom: 0;
+
+			.product-image {
+				width: 421px;
+				bottom: -50px;
+			}
+
+			> * {
+				position: relative;
+				z-index: 2;
+			}
+
+			.product-image {
+				left: 0;
+				z-index: 3;
+			}
+		}
+
+		.header {
+			padding: 0;
+			position: relative;
+			top: 0;
+			width: auto;
+			text-align: right;
+
+			> span {
+				font-size: 28px;
+				margin-bottom: 1px;
+				margin-right: 0;
+				letter-spacing: 0.6px;
+			}
+
+			.title {
+				font-size: 30px;
+				margin-bottom: 1px;
+				margin-right: 0;
+			}
+
+			mark {
+				font-size: 14px;
+				margin-bottom: 15px;
+				color: #fff;
+				font-weight: 400;
+			}
+
+			.btn {
+				margin: 0;
+				width: 236px;
+				position: static;
+				height: 38px;
+				font-size: 20px;
+			}
+		}
+	}
+}
+
+@media (min-width: 992px) {
+
+	.front-page {
+
+		.header_wrapper {
+
+			.product-image {
+				width: 522px;
+				bottom: -69px;
+				left: 0;
+			}
+		}
+
+		.header {
+			> span {
+				font-size: 50px;
+				margin-bottom: 0;
+			}
+
+			.title {
+				font-size: 40px;
+				margin-bottom: 11px;
+			}
+
+			mark {
+				font-size: 20px;
+				margin-bottom: 28px;
+			}
+		}
+
+	}
+	/* ------------ /header_wrapper ------------ */
+}
+
+@media (min-width: 1200px) {
+	/* ------------ header_wrapper ------------ */
+	.front-page {
+
+		.header_wrapper {
+			padding: 152px 126px 175px;
+
+			.product-image {
+				bottom: -79px;
+				left: 0;
+				width: 689px;
+			}
+		}
+
+		.header {
+			> span {
+				font-size: 80px;
+			}
+
+			.title {
+				font-size: 80px;
+			}
+
+			mark {
+				font-size: 24px;
+			}
+		}
+	}
+}
+
+
+@media (min-width: 1600px) {
+	
+	.front-page {
+	
+		.header_wrapper {
+			padding: 252px 426px 134px;
+
+			&:before {
+				content: '';
+				position: absolute;
+				z-index: 1;
+				background: rgba(255, 255, 255, 0.2);
+				top: 0;
+				bottom: 0;
+				right: 316px;
+				width: 468px;
+				transform: skewX(45deg);
+			}
+
+			.product-image {
+				width: 765px;
+				bottom: -131px;
+				left: 0;
+			}
+		}
+		
+		.header_wrapper + .products-gallery > * {
+			z-index: 2;
+		}
+		.header_wrapper + .products-gallery {
+			overflow: hidden;
+			padding: 81px 0 65px;
+		}
+		.header_wrapper + .products-gallery:before {
+			content: '';
+			position: absolute;
+			z-index: 1;
+			background: rgba(0, 0, 0, 0.9);
+			top: 0;
+			right: -209px;
+			bottom: 0;
+			width: 468px;
+			transform: skewX(45deg);
+		}
+	}
+	/* ------------ /header_wrapper ------------ */
+
+}
+
+@media (min-width: 1900px) {
+
+	/* ------------ header_wrapper ------------ */
+	.front-page {
+		
+		.header_wrapper .product-image {
+			width: 957px;
+			left: 141px;
+		}
+	}
+	/* ------------ /header_wrapper ------------ */
+
+}

@@ -1,0 +1,693 @@
+/* authorize */
+
+/*---------- authorize --------*/
+.authorize {
+	max-width: 1337px;
+	margin: 0 auto;
+	padding: 0;
+
+	&__head {
+		margin: 0 0 30px 0;
+		text-align: center;
+	}
+
+	&__logo {
+		display: none;
+
+		&_mob {
+			display: inline-block;
+		}
+	}
+
+	&__title {
+		font-size: 28px;
+		color: $authorize-title-color;
+		font-weight: 400;
+		margin: 0 -2px 25px 0;
+		letter-spacing: -0.3px;
+	}
+
+	&__wrap {
+		position: relative;
+		background: $authorize-wrap-bg;
+		max-width: 310px;
+		margin: 0 auto;
+		padding: 40px 20px;
+
+		&:after {
+			content: '.';
+			height: 0;
+			display: block;
+			overflow: hidden;
+			clear: both;
+		}
+
+		&:before {
+			content: '';
+			position: absolute;
+			right: 50%;
+			background: $authorize-wrap-border;
+			top: 49px;
+			bottom: 43px;
+		}
+	}
+
+	&__about {
+		margin-bottom: 30px;
+
+		p {
+			font-size: 18px;
+			line-height: 21px;
+			color: #262626;
+			margin-bottom: 23px;
+			letter-spacing: -0.5px;
+
+			strong {
+				@include pauza-fot-book();
+			}
+		}
+
+		a {
+			color: $authorize-link;
+			border-bottom: 1px solid $authorize-link;
+			transition: border .3s ease-in-out;
+
+			&:visited {
+				color: $authorize-link;
+			}
+
+			&:hover {
+				border-bottom: 1px solid transparent;
+			}
+		}
+
+		ul {
+			margin: 0 0 30px;
+		}
+
+		li {
+			position: relative;
+			display: block;
+			padding-right: 18px;
+			font-size: 15px;
+			color: #525151;
+			margin-bottom: 10px;
+			letter-spacing: -0.6px;
+
+			&:before {
+				content: '';
+				position: absolute;
+				top: 0;
+				right: 0;
+				width: 11px;
+				height: 10px;
+				background: url(../img/check-icon.png) no-repeat;
+				background-size: contain;
+			}
+		}
+	}
+
+	&__form {
+
+		.btn-facebook {
+			margin: 0 0 24px;
+		}
+
+		fieldset {
+			border-top: 1px solid $authorize-form-border;
+			padding: 25px 0 5px;
+
+			input {
+				width: 100%;
+				height: 40px;
+				display: block;
+				padding: 0 12px;
+				border: 1px solid $authorize-input-border;
+				font-size: 16px;
+				color: #575757;
+				@include pauza-fot-book();
+				margin-bottom: 7px;
+			}
+
+			> span {
+				width: 53px;
+				display: inline-block;
+				padding: 0 5px 0 0;
+				float: right;
+				font-size: 16px;
+				line-height: 44px;
+				color: $authorize-form-txt;
+			}
+
+			.ares-select {
+				float: right;
+				width: 81px;
+				margin-left: -1px;
+				margin-bottom: 22px;
+			}
+
+			.ares-select:nth-child(3) {
+				width: 68px;
+			}
+		}
+
+		&-gender {
+			text-align: center;
+			margin-bottom: 12px;
+
+			div {
+				display: inline-block;
+				vertical-align: top;
+				width: auto;
+				margin: 0 4px;
+				text-align: right;
+
+				input {
+					width: 16px;
+					cursor: pointer;
+				}
+
+				label:hover:before,
+				label:hover:after {
+					box-shadow: 1px 2px 3px $authorize-gender-shadow;
+				}
+
+				input[type='radio']:not(checked) {
+					position: absolute;
+					opacity: 0;
+				}
+
+				input[type='radio']:not(checked) + label {
+					display: inline-block;
+					position: relative;
+					width: auto;
+					top: auto;
+					user-select: none;
+				}
+
+				input[type='radio']:not(checked) + label:before {
+					content: '';
+					display: block;
+					width: 36px;
+					height: 36px;
+					border-radius: 50%;
+					border: 1px solid $authorize-gender-input-border;
+					opacity: 1;
+					transition: opacity .3s ease-in-out, box-shadow .3s ease-in-out;
+				}
+
+				input[type='radio']:checked + label:before {
+					opacity: 0;
+				}
+
+				input[type='radio']:not(checked) + label.male:before {
+					background: $authorize-radio-not-checked-bg url(../img/gender-sprite.png) 7px -38px no-repeat;
+					background-size: 101px 67px;
+				}
+
+				input[type='radio']:not(checked) + label.male:after {
+					background: $authorize-radio-checked-bg url(../img/gender-sprite.png) 7px 5px no-repeat;
+					background-size: 101px 67px;
+				}
+
+				input[type='radio']:not(checked) + label.female:before {
+					background: $authorize-radio-not-checked-bg url(../img/gender-sprite.png) -33px -39px no-repeat;
+					background-size: 101px 67px;
+				}
+
+				input[type='radio']:not(checked) + label.female:after {
+					background: $authorize-radio-checked-bg url(../img/gender-sprite.png) -33px 5px no-repeat;
+					background-size: 101px 67px;
+				}
+
+				input[type='radio']:not(checked) + label.unicorn:before {
+					background: $authorize-radio-not-checked-bg url(../img/gender-sprite.png) -73px -37px no-repeat;
+					background-size: 101px 67px;
+				}
+
+				input[type='radio']:not(checked) + label.unicorn:after {
+					background: $authorize-radio-checked-bg url(../img/gender-sprite.png) -72px 7px no-repeat;
+					background-size: 101px 67px;
+				}
+
+				input[type='radio']:not(checked) + label:after {
+					content: '';
+					position: absolute;
+					top: 0;
+					right: 0;
+					width: 36px;
+					height: 36px;
+					border-radius: 50%;
+					border: 1px solid $authorize-radio-checked-bg;
+					opacity: 0;
+					transition: opacity .3s ease-in-out, box-shadow .3s ease-in-out;
+				}
+
+				input[type='radio']:checked + label:after {
+					opacity: 1;
+					user-select: none;
+				}
+
+				input[type='radio']:checked + label + span {
+					opacity: 1;
+				}
+			}
+
+			label + span {
+				font-size: 14px;
+				display: block;
+				text-align: center;
+				color: $authorize-radio-checked-bg;
+				opacity: 0;
+				transition: opacity .3s ease-in-out;
+			}
+
+		}
+
+		&-double {
+
+			input {
+				display: inline-block;
+				vertical-align: top;
+				margin: 0 0 8px 5px;
+			}
+		}
+
+		input:last-child {
+			margin: 0 0 8px 0;
+		}
+
+		button[type='submit'] {
+			display: block;
+			width: 100%;
+			max-width: 269px;
+			margin: 10px 0 0;
+			padding: 0;
+			height: 31px;
+			font-size: 15px;
+			border: none;
+
+			span {
+				width: 100%;
+				max-width: 269px;
+			}
+		}
+	}
+
+	.nice-check {
+		font-size: 12px;
+		margin-bottom: 10px;
+
+		label {
+			color: $authorize-check-label;
+
+			&:after {
+				top: -4px;
+				line-height: 2.3;
+			}
+		}
+	}
+
+	&__info {
+		font-size: 14px;
+		color: $authorize-info;
+		text-align: center;
+		display: block;
+
+		a {
+			color: $authorize-info;
+			text-decoration: underline;
+
+			&:visited {
+				color: $authorize-info;
+			}
+
+			&:hover {
+				text-decoration: none;
+			}
+		}
+	}
+
+	&__nice {
+		position: relative;
+		padding: 20px 0 0;
+
+		&:before {
+			content: '';
+			position: absolute;
+			top: 0;
+			left: 50%;
+			margin-left: -26px;
+			width: 52px;
+			height: 1px;
+			background: $authorize-form_nice-border;
+		}
+	}
+
+	.woocommerce-error {
+		margin-top: -14px;
+		font-size: 12px;
+		line-height: 1;
+
+		a {
+			border-bottom: 1px solid transparent;
+			-webkit-transition: border-bottom 0.3s ease;
+			transition: border-bottom 0.3s ease;
+
+			&:hover {
+				border-bottom: 1px solid $authorize-error-color;
+			}
+		}
+	}
+
+	.btn_green-transp {
+		margin: 0;
+		width: 100%;
+
+		span {
+			width: 100%;
+		}
+	}
+
+}
+/*----------/authorize--------*/
+
+/*---------popup---------*/
+.popup {
+
+	.authorize {
+
+		&__logo {
+			display: inline-block;
+
+			&_mob {
+				display: none;
+			}
+		}
+	}
+
+	.site__content-wrap {
+		padding: 0;
+		display: inline-block;
+		text-align: right;
+		width: 100%;
+	}
+
+	&__login {
+		padding: 0 !important;
+		margin: 0 20px;
+	  	max-width: 316px;
+	}
+
+}
+/*---------/popup---------*/
+
+/*-----------site---------*/
+.site__content_register {
+
+	.authorize__wrap {
+		max-width: 920px !important;
+		padding: 0 20px 50px;
+	}
+
+	.authorize__form {
+
+		fieldset {
+			border: none;
+			padding: 0;
+		}
+
+		button[type='submit'] {
+			margin: 22px auto 11px;
+		}
+
+
+	}
+
+	.personal-area__more-item {
+		display: none;
+	}
+
+}
+/*-----------/site---------*/
+
+@media (min-width: 768px) {
+
+	/*-----------site---------*/
+	.site_register:after {
+		height: 55px;
+	}
+	.site__content_register {
+		background-size: cover;
+		padding: 90px 0 0;
+
+		.authorize {
+			//padding: 0 20px 50px;
+		}
+
+		.authorize__wrap {
+			padding: 30px;
+		}
+
+	}
+	.site__content_login {
+		padding: 90px 0 0;
+	}
+	.site_login:before {
+		content: '';
+		position: absolute;
+		top: 56px;
+		left: 20px;
+		bottom: 56px;
+		right: 20px;
+		background: url("../img/login-bg.jpg") no-repeat top center;
+		background-size: cover;
+	}
+	/*/---------site-----------*/
+
+	/*/---------authorize-----------*/
+	.authorize {
+
+		&__logo {
+			display: inline-block;
+
+			&_mob {
+				display: none;
+			}
+		}
+
+		&__wrap {
+			padding: 30px;
+		}
+	}
+	/*---------/authorize---------*/
+
+	/*---------popup---------*/
+	.popup {
+
+		.authorize__logo {
+			display: inline-block;
+
+			&_mob {
+				display: none;
+			}
+		}
+
+		&__login {
+			margin: 0 auto;
+		}
+	}
+	/*---------/popup---------*/
+
+}
+
+@media (min-width: 992px) {
+
+	/*----------authorize--------*/
+	.authorize {
+		//padding: 0 30px 99px;
+
+		&__head {
+			margin: 0 20px 30px 0;
+		}
+
+		&__wrap {
+			display: -webkit-box;
+			display: -moz-box;
+			display: -ms-flexbox;
+			display: -webkit-flex;
+			display: flex;
+			flex-direction: row;
+			justify-content: space-between;
+			align-items: stretch;
+			max-width: 763px;
+			padding: 51px 61px 54px 57px;
+
+			&:before {
+				width: 1px;
+				top: 51px;
+				bottom: 54px;
+			}
+		}
+
+		&__about {
+			position: relative;
+			float: right;
+			width: 50%;
+			padding: 0 0 40px 45px;
+			min-height: 312px;
+			margin: 0;
+
+			ul {
+				margin: 0;
+			}
+
+			div a:hover {
+				border-bottom: 1px solid transparent;
+			}
+		}
+
+		&__form {
+			position: relative;
+			float: left;
+			width: 50%;
+			min-height: 312px;
+			margin: 0;
+			padding: 0 53px 40px 0;
+
+			fieldset {
+
+				> span {
+					width: 65px;
+					padding: 0 5px 0 0;
+				}
+
+				.ares-select {
+					width: 83px;
+				}
+
+				.ares-select:nth-child(3) {
+					width: 68px;
+				}
+			}
+
+			button[type='submit'] {
+				position: absolute;
+				bottom: 0;
+				left: 50%;
+				margin: 0 0 0 -160px;
+
+				span {
+					width: 328px;
+				}
+			}
+
+			.btn-facebook {
+				width: 100%;
+				text-align: center;
+			}
+		}
+
+		.btn_green-transp {
+			position: absolute;
+			bottom: 0;
+			right: 0;
+			width: calc(100% - 53px);
+		}
+	}
+	/*----------/authorize--------*/
+
+	/*-----------site---------*/
+	.site__content_register {
+
+		.authorize {
+			//padding: 0 30px 99px;
+		}
+
+		.authorize__wrap {
+			padding: 51px 40px;
+		}
+
+		.authorize__form {
+
+			button[type='submit'] {
+				position: relative;
+				left: auto;
+				max-width: none;
+			}
+
+		}
+
+	}
+	/*/---------site-----------*/
+
+  /*---------popup---------*/
+  .popup {
+
+	&__login {
+	  max-width: 763px;
+	}
+  }
+  /*---------/popup---------*/
+}
+
+@media (min-width: 1137px) {
+
+	/*----------authorize--------*/
+	.authorize {
+		&__head {
+			margin-bottom: 60px;
+		}
+
+		&__form {
+
+			fieldset {
+
+				> span {
+					width: 72px;
+					padding: 0 15px 0 0;
+				}
+
+				.ares-select {
+					width: 85px;
+				}
+
+				.ares-select:nth-child(3) {
+					width: 89px;
+				}
+			}
+
+			&-double {
+
+				input {
+					width: 160px !important;
+					display: inline-block !important;
+					vertical-align: top;
+				}
+
+				input:last-child {
+					margin: 0 0 8px 0;
+				}
+			}
+		}
+	}
+	/*----------/authorize--------*/
+
+	/*-----------site---------*/
+	.site__content_register {
+
+		.authorize__wrap {
+			padding: 58px;
+		}
+
+		.authorize__form {
+			width: 49%;
+			padding: 22px 54px 0 10px;
+		}
+
+	}
+	/*-----------/site---------*/
+
+}
+
+
